@@ -7,7 +7,6 @@ title: Markdown Post
 ---
 # Welcome to Vidhi's First Post!
 
-
 > "Code is like humor. When you have to explain it, it’s bad." - Cory House
 
 

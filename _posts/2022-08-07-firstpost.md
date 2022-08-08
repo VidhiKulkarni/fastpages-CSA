@@ -7,6 +7,10 @@ title: Markdown Post
 ---
 # Welcome to Vidhi's First Post!
 
+
+> "Code is like humor. When you have to explain it, it’s bad." - Cory House
+
+
 List of Programming Languages:
 
 1. Java
@@ -15,66 +19,28 @@ List of Programming Languages:
 5. C++
 6. R
 
-> "Code is like humor. When you have to explain it, it’s bad." - Cory House
 
-## Images
+## Time to Code!
 
-![]({{ site.baseurl }}/images/logo.png "fast.ai's logo")
-
-## Code
-
-You can format text and code per usual 
-
-General preformatted text:
-
-    # Do a thing
-    do_thing()
-
-Python code and output:
+My first program:
 
 ```python
-# Prints '2'
-print(1+1)
+# Prints 'Hello World'
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+}
 ```
 
-    2
+## Java vs Python
 
-Formatting text as shell commands:
-
-```shell
-echo "hello world"
-./some_script.sh --option "value"
-wget https://example.com/cat_photo1.png
-```
-
-Formatting text as YAML:
-
-```yaml
-key: value
-- another_key: "another value"
-```
-
-
-## Tables
-
-| Column 1 | Column 2 |
+| Java | Python |
 |-|-|
-| A thing | Another thing |
+| statically typed and compiled language | dynamically typed and interpreted language |
 
 
 ## Tweetcards
 
-{% twitter https://twitter.com/jakevdp/status/1204765621767901185?s=20 %}
-
-
-## Footnotes
-
-
-
-[^1]: This is the footnote.
-
-
-
-# Welcome to Vidhi's First Post! 
-
-
+{% twitter [https://twitter.com/jakevdp/status/1204765621767901185?s=20](https://twitter.com/NighthawkCoding/status/1454987072826011650) %}

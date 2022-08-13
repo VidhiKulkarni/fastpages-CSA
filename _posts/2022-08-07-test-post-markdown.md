@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: First Post
 categories: [markdown]
-title: Markdown Post
+title: First Post
 ---
 # Welcome to Vidhi's First Post!
 

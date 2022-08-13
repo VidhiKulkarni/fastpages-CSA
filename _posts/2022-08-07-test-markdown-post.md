@@ -18,28 +18,8 @@ List of Programming Languages:
 5. C++
 6. R
 
-
-## Time to Code!
-
-My first program:
-
-```python
-# Prints 'Hello World'
-
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!"); 
-    }
-}
-```
-
 ## Java vs Python
 
 | Java | Python |
 |-|-|
 | statically typed and compiled language | dynamically typed and interpreted language |
-
-
-## Tweetcards
-
-{% twitter [https://twitter.com/jakevdp/status/1204765621767901185?s=20](https://twitter.com/NighthawkCoding/status/1454987072826011650) %}

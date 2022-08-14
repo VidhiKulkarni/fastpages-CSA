@@ -33,8 +33,14 @@ class HelloWorld {
 }
 ```
 
+
 ## Java vs Python
 
 | Java | Python |
 |-|-|
 | statically typed and compiled language | dynamically typed and interpreted language |
+
+
+## Tweetcards
+
+{% twitter [https://twitter.com/jakevdp/status/1204765621767901185?s=20](https://twitter.com/NighthawkCoding/status/1454987072826011650) %}

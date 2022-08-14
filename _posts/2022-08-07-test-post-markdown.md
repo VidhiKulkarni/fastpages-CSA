@@ -43,4 +43,4 @@ class HelloWorld {
 
 ## Tweetcards
 
-{% twitter [https://twitter.com/jakevdp/status/1204765621767901185?s=20](https://twitter.com/NighthawkCoding/status/1454987072826011650) %}
+{% twitter https://twitter.com/NighthawkCoding/status/1454987072826011650 %}

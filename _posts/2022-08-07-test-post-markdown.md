@@ -18,6 +18,21 @@ List of Programming Languages:
 5. C++
 6. R
 
+
+## Time to Code!
+
+My first program:
+
+```python
+# Prints 'Hello World'
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+}
+```
+
 ## Java vs Python
 
 | Java | Python |

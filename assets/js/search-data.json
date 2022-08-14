@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "First Post",
-            "content": "Welcome to Vidhi’s First Post! . “Code is like humor. When you have to explain it, it’s bad.” - Cory House . List of Programming Languages: . Java | Python | Javascript | C++ | R | Java vs Python . Java Python . statically typed and compiled language | dynamically typed and interpreted language | .",
+            "content": "Welcome to Vidhi’s First Post! . “Code is like humor. When you have to explain it, it’s bad.” - Cory House . List of Programming Languages: . Java | Python | Javascript | C++ | R | Time to Code! . My first program: . # Prints &#39;Hello World&#39; class HelloWorld { public static void main(String[] args) { System.out.println(&quot;Hello, World!&quot;); } } . Java vs Python . Java Python . statically typed and compiled language | dynamically typed and interpreted language | .",
             "url": "https://vidhikulkarni.github.io/fastpages-CSA/markdown/2022/08/07/test-post-markdown.html",
             "relUrl": "/markdown/2022/08/07/test-post-markdown.html",
             "date": " • Aug 7, 2022"

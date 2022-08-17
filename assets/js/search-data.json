@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "Title",
+            "title": "Vidhi's Java Notebook",
             "content": "Welcome to Vidhi&#39;s Java Notebook! . public class Hello { public static void main(String[] args) { System.out.println(&quot;Hello World!&quot;); } } Hello.main(null); . Failed to start the Kernel. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details. .",
             "url": "https://vidhikulkarni.github.io/fastpages-CSA/2022/08/16/java-notebook.html",
             "relUrl": "/2022/08/16/java-notebook.html",

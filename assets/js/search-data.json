@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Vidhi's Java Notebook",
-            "content": ". toc: true layout: post description: Java Notebook categories: [markdown] . title: Java Jupyter Notebook . public class Hello { public static void main(String[] args) { System.out.println(&quot;Hello World!&quot;); } } Hello.main(null); . Hello World! .",
+            "content": ". toc: true | layout: post | description: Java Notebook | categories: [markdown] | title: Java Jupyter Notebook | . . public class Hello { public static void main(String[] args) { System.out.println(&quot;Hello World!&quot;); } } Hello.main(null); . Hello World! .",
             "url": "https://vidhikulkarni.github.io/fastpages-CSA/2022/08/16/java-notebook.html",
             "relUrl": "/2022/08/16/java-notebook.html",
             "date": " • Aug 16, 2022"

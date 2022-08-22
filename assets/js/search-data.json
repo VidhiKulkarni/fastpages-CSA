@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Vidhi's Python Notebook",
-            "content": "Welcome to Vidhi&#39;s First Notebook! . print(&quot;Hello&quot;) . Hello .",
-            "url": "https://vidhikulkarni.github.io/fastpages-CSA/2022/08/16/python-notebook.html",
-            "relUrl": "/2022/08/16/python-notebook.html",
+            "title": "Python Notebook",
+            "content": "print(&quot;Hello&quot;) . Hello .",
+            "url": "https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/16/python-notebook.html",
+            "relUrl": "/fastpages/jupyter/2022/08/16/python-notebook.html",
             "date": " • Aug 16, 2022"
         }
         

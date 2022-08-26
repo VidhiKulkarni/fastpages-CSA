@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Primitives Hacks",
-            "content": "import java.util.Scanner; public class CelciustoKelvin { public static void main (String[] args) { Scanner input; input = new Scanner(System.in); System.out.println(&quot;Enter your name: &quot;); String name = input.nextLine(); System.out.println(&quot;Hello &quot; + name ); input.close(); input = new Scanner(System.in); System.out.println(&quot;Enter a degree in Celsius: &quot;); double celsius = input.nextDouble(); double kelvin = (celsius + 273.0); System.out.println( celsius + &quot; degree Celsius is equal to &quot; + kelvin + &quot; in Celsius&quot;); input.close(); } } CelciustoKelvin.main(null); . Enter your name: Hello Riya Enter a degree in Celsius: 78.0 degree Celsius is equal to 351.0 in Celsius .",
-            "url": "https://vidhikulkarni.github.io/fastpages-CSA/2022/08/25/tempconvert.html",
-            "relUrl": "/2022/08/25/tempconvert.html",
+            "title": "Temperature Converter",
+            "content": "import java.util.Scanner; public class CelciustoKelvin { public static void main (String[] args) { Scanner input; input = new Scanner(System.in); System.out.println(&quot;Enter your name: &quot;); String name = input.nextLine(); System.out.println(&quot;Hello &quot; + name ); input.close(); input = new Scanner(System.in); System.out.println(&quot;Are you in AP Chemistry: &quot;); String chem = input.nextLine(); System.out.println(&quot;Your answer: &quot; + chem); input.close(); input = new Scanner(System.in); System.out.println(&quot;Enter a degree in Celsius: &quot;); double celsius = input.nextDouble(); double kelvin = (celsius + 273.0); System.out.println( celsius + &quot; degree Celsius is equal to &quot; + kelvin + &quot; in Celsius&quot;); input.close(); } } CelciustoKelvin.main(null); . Enter your name: Hello Vidhi Are you in AP Chemistry: Your answer: True Enter a degree in Celsius: 49.0 degree Celsius is equal to 322.0 in Celsius .",
+            "url": "https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/25/tempconvert.html",
+            "relUrl": "/fastpages/jupyter/2022/08/25/tempconvert.html",
             "date": " • Aug 25, 2022"
         }
         

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -127,6 +127,10 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Data-Types">Data Types </a></li>
+<li class="toc-entry toc-h2"><a href="#Input-Primitives">Input Primitives </a></li>
+<li class="toc-entry toc-h2"><a href="#Output-Primitive-Data">Output Primitive Data </a></li>
+<li class="toc-entry toc-h2"><a href="#Grade-Calculator">Grade Calculator </a></li>
 <li class="toc-entry toc-h2"><a href="#Temperature-Converter-(Celcius-to-Kelvin)">Temperature Converter (Celcius to Kelvin) </a></li>
 </ul><!--
 #################################################
@@ -137,6 +141,391 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Types">
+<a class="anchor" href="#Data-Types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Types<a class="anchor-link" href="#Data-Types"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>primitive data types: lowercase</p>
+<ul>
+<li>boolean</li>
+<li>integers</li>
+<li>doubles</li>
+<li>float</li>
+<li>character</li>
+</ul>
+</li>
+<li>
+<p>non primitive data types: uppercase</p>
+<ul>
+<li>wrapper class - string</li>
+<li>arrays</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DefinePrimitives</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">anInt</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+      <span class="kt">double</span> <span class="n">aDouble</span> <span class="o">=</span> <span class="mf">89.9</span><span class="p">;</span>
+      <span class="kt">boolean</span> <span class="n">aBoolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+      <span class="c1">// not primitives but essential</span>
+      <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="s">"Hello, World!"</span><span class="p">;</span>   <span class="c1">// wrapper class shortcut assignment</span>
+      <span class="n">String</span> <span class="n">aStringFormal</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">"Greetings, World!"</span><span class="p">);</span>
+  
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"anInt: "</span> <span class="o">+</span> <span class="n">anInt</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"aDouble: "</span> <span class="o">+</span> <span class="n">aDouble</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"aBoolean: "</span> <span class="o">+</span> <span class="n">aBoolean</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"aString: "</span> <span class="o">+</span> <span class="n">aString</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"aStringFormal: "</span> <span class="o">+</span> <span class="n">aStringFormal</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">DefinePrimitives</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>anInt: 100
+aDouble: 89.9
+aBoolean: true
+aString: Hello, World!
+aStringFormal: Greetings, World!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Input-Primitives">
+<a class="anchor" href="#Input-Primitives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Input Primitives<a class="anchor-link" href="#Input-Primitives"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>hard coded: variables are assigned values beforehand</li>
+<li>dynamic: variable values are determined by user input</li>
+<li>scanner: java utility class for console input</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// java style to import library</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="c1">// class must alway have 1st letter as uppercase, CamelCase is Java Class convention</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScanPrimitives</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>    
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+
+        <span class="c1">// primitive int</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter an integer: "</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">sampleInputInt</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sampleInputInt</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not an integer</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an integer (form like 159), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+        <span class="c1">// primitive double</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter a double: "</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kt">double</span> <span class="n">sampleInputDouble</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sampleInputDouble</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not a number</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an double (form like 9.99), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+        <span class="c1">// primitive boolean</span>
+        <span class="n">input</span> <span class="o">=</span>  <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter a boolean: "</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kt">boolean</span> <span class="n">sampleInputBoolean</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextBoolean</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sampleInputBoolean</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not true or false</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an boolean (true or false), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+        <span class="c1">// wrapper class String</span>
+        <span class="n">input</span> <span class="o">=</span>  <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter a String: "</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">sampleInputString</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sampleInputString</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// this may never happen</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an String, "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">ScanPrimitives</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter an integer: 89
+Enter a double: 89.0
+Enter a boolean: true
+Enter a String: hello
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Output-Primitive-Data">
+<a class="anchor" href="#Output-Primitive-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Output Primitive Data<a class="anchor-link" href="#Output-Primitive-Data"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Examples show descriptions of the mathematical operation combine with the result of the operation:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimitiveDivision</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Integer Division"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tint output with concatenation: "</span> <span class="o">+</span> <span class="n">i1</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">i2</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="n">i1</span><span class="o">/</span><span class="n">i2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">"\tint output with format: %d/%d = %d"</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i1</span><span class="o">/</span><span class="n">i2</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\tint output with printf: %d/%d = %d\n"</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i1</span><span class="o">/</span><span class="n">i2</span><span class="p">);</span>
+
+        <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">d2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Double Division"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tdouble output with concatenation: "</span> <span class="o">+</span> <span class="n">d1</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">d2</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="n">d1</span><span class="o">/</span><span class="n">d2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">"\tdouble output with format: %.2f/%.2f = %.2f"</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">,</span> <span class="n">d1</span><span class="o">/</span><span class="n">d2</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\tdouble output with printf: %.2f/%.2f = %.2f\n"</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">,</span> <span class="n">d1</span><span class="o">/</span><span class="n">d2</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Casting and Remainders"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"\tint cast to double on division: %d/%d = %.2f\n"</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">i1</span><span class="o">/</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">i2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tint using modulo for remainder: "</span> <span class="o">+</span> <span class="n">i1</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="n">i2</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="n">i1</span><span class="o">/</span><span class="n">i2</span> <span class="o">+</span> <span class="s">" remainder "</span> <span class="o">+</span> <span class="n">i1</span><span class="o">%</span><span class="n">i2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">PrimitiveDivision</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Integer Division
+	int output with concatenation: 7/2 = 3
+	int output with format: 7/2 = 3
+	int output with printf: 7/2 = 3
+Double Division
+	double output with concatenation: 7.0/2.0 = 3.5
+	double output with format: 7.00/2.00 = 3.50
+	double output with printf: 7.00/2.00 = 3.50
+Casting and Remainders
+	int cast to double on division: 7/2 = 3.50
+	int using modulo for remainder: 7/2 = 3 remainder 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Grade-Calculator">
+<a class="anchor" href="#Grade-Calculator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grade Calculator<a class="anchor-link" href="#Grade-Calculator"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Lab uses primitive double and Wrapper Class double </li>
+<li>Uses ArrayList</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GradeCalculator</span> <span class="p">{</span>
+    <span class="c1">// introduction to Double wrapper class (object)</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">grades</span><span class="p">;</span>   <span class="c1">// similar to Python list</span>
+
+    <span class="c1">// constructor, initializes ArrayList and call enterGrades method</span>
+    <span class="kd">public</span> <span class="nf">GradeCalculator</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">grades</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">enterGrades</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">// double requires test for zero versus threshold, DO NOT compare to Zero</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isZero</span><span class="p">(</span><span class="kt">double</span> <span class="n">value</span><span class="p">){</span>
+        <span class="kt">double</span> <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="n">threshold</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="c1">// enterGrades input method using scanner</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">enterGrades</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter a double, 0 to exit: "</span><span class="p">);</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">sampleInputDouble</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sampleInputDouble</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">isZero</span><span class="p">(</span><span class="n">sampleInputDouble</span><span class="p">))</span> <span class="k">break</span><span class="p">;</span>       <span class="c1">// exit loop on isZero</span>
+                <span class="k">else</span> <span class="k">this</span><span class="p">.</span><span class="na">grades</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">sampleInputDouble</span><span class="p">);</span>    <span class="c1">// adding to object, ArrayList grades</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not a number</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an double (form like 9.99), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// average calculation </span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">average</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// running total</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">double</span> <span class="n">num</span> <span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="na">grades</span><span class="p">)</span> <span class="p">{</span>    <span class="c1">// enhanced for loop</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">num</span><span class="p">;</span>   <span class="c1">// shortcut add and assign operator</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">total</span> <span class="o">/</span> <span class="k">this</span><span class="p">.</span><span class="na">grades</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>  <span class="c1">// double math, ArrayList grades object maintains its size</span>
+    <span class="p">}</span>
+
+    <span class="c1">// static main method, used as driver and tester</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">GradeCalculator</span> <span class="n">grades</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GradeCalculator</span><span class="p">();</span> <span class="c1">// calls constructor, creates object, which calls enterGrades</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average: "</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">"%.2f"</span><span class="p">,</span> <span class="n">grades</span><span class="p">.</span><span class="na">average</span><span class="p">()));</span>  <span class="c1">// format used to standardize to two decimal points</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// IJava activation</span>
+<span class="n">GradeCalculator</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a double, 0 to exit: 100.0
+Enter a double, 0 to exit: 90.0
+Enter a double, 0 to exit: 80.0
+Enter a double, 0 to exit: 70.0
+Enter a double, 0 to exit: 80.0
+Enter a double, 0 to exit: 60.0
+Enter a double, 0 to exit: 50.0
+Enter a double, 0 to exit: 0.0
+Average: 75.71
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -175,7 +564,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter a degree in Celsius: "</span><span class="p">);</span>
         <span class="kt">double</span> <span class="n">celsius</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
         <span class="kt">double</span> <span class="n">kelvin</span> <span class="o">=</span> <span class="p">(</span><span class="n">celsius</span> <span class="o">+</span> <span class="mf">273.0</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span> <span class="n">celsius</span> <span class="o">+</span> <span class="s">" degree Celsius is equal to "</span> <span class="o">+</span> <span class="n">kelvin</span> <span class="o">+</span> <span class="s">" in Celsius"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span> <span class="n">celsius</span> <span class="o">+</span> <span class="s">" degree Celsius is equal to "</span> <span class="o">+</span> <span class="n">kelvin</span> <span class="o">+</span> <span class="s">" in Kelvin"</span><span class="p">);</span>
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -197,7 +586,7 @@ Hello Vidhi
 Are you in AP Chemistry: 
 Your answer: True
 Enter a degree in Celsius: 
-57.0 degree Celsius is equal to 330.0 in Celsius
+68.0 degree Celsius is equal to 341.0 in Kelvin
 </pre>
 </div>
 </div>

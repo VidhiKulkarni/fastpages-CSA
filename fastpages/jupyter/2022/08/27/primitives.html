@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Temperature Converter" />
 <meta property="og:description" content="Temperature Converter" />
-<link rel="canonical" href="https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/tempconvert.html" />
-<meta property="og:url" content="https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/tempconvert.html" />
+<link rel="canonical" href="https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/primitives.html" />
+<meta property="og:url" content="https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/primitives.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-08-27T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Primitives Notes + Hacks" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-27T00:00:00-05:00","datePublished":"2022-08-27T00:00:00-05:00","description":"Temperature Converter","headline":"Primitives Notes + Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/tempconvert.html"},"url":"https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/tempconvert.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-27T00:00:00-05:00","datePublished":"2022-08-27T00:00:00-05:00","description":"Temperature Converter","headline":"Primitives Notes + Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/primitives.html"},"url":"https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/08/27/primitives.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages-CSA/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://vidhikulkarni.github.io/fastpages-CSA/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-CSA/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -100,24 +100,24 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-justify-center">
           <div class="px-2">
 
-    <a href="https://github.com/VidhiKulkarni/fastpages-CSA/tree/master/_notebooks/2022-26-08-tempconvert.ipynb" role="button" target="_blank">
+    <a href="https://github.com/VidhiKulkarni/fastpages-CSA/tree/master/_notebooks/2022-26-08-primitives.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/fastpages-CSA/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/VidhiKulkarni/fastpages-CSA/master?filepath=_notebooks%2F2022-26-08-tempconvert.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/VidhiKulkarni/fastpages-CSA/master?filepath=_notebooks%2F2022-26-08-primitives.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/fastpages-CSA/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/VidhiKulkarni/fastpages-CSA/blob/master/_notebooks/2022-26-08-tempconvert.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/VidhiKulkarni/fastpages-CSA/blob/master/_notebooks/2022-26-08-primitives.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/fastpages-CSA/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
           <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FVidhiKulkarni%2Ffastpages-CSA%2Fblob%2Fmaster%2F_notebooks%2F2022-26-08-tempconvert.ipynb" target="_blank">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FVidhiKulkarni%2Ffastpages-CSA%2Fblob%2Fmaster%2F_notebooks%2F2022-26-08-primitives.ipynb" target="_blank">
       <img class="notebook-badge-image" src="/fastpages-CSA/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
   </a>
 </div>
@@ -127,20 +127,34 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Primitives-Notes">Primitives Notes </a></li>
 <li class="toc-entry toc-h2"><a href="#Data-Types">Data Types </a></li>
 <li class="toc-entry toc-h2"><a href="#Input-Primitives">Input Primitives </a></li>
 <li class="toc-entry toc-h2"><a href="#Output-Primitive-Data">Output Primitive Data </a></li>
 <li class="toc-entry toc-h2"><a href="#Grade-Calculator">Grade Calculator </a></li>
-<li class="toc-entry toc-h2"><a href="#Temperature-Converter-(Celcius-to-Kelvin)">Temperature Converter (Celcius to Kelvin) </a></li>
+<li class="toc-entry toc-h2"><a href="#Primitives-Hacks">Primitives Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Temperature-Converter-(Celcius-to-Kelvin)">Temperature Converter (Celcius to Kelvin) </a></li>
+</ul>
+</li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2022-26-08-tempconvert.ipynb
+# file to edit: _notebooks/2022-26-08-primitives.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Primitives-Notes">
+<a class="anchor" href="#Primitives-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primitives Notes<a class="anchor-link" href="#Primitives-Notes"> </a>
+</h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -529,9 +543,18 @@ Average: 75.71
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Temperature-Converter-(Celcius-to-Kelvin)">
-<a class="anchor" href="#Temperature-Converter-(Celcius-to-Kelvin)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Temperature Converter (Celcius to Kelvin)<a class="anchor-link" href="#Temperature-Converter-(Celcius-to-Kelvin)"> </a>
+<h2 id="Primitives-Hacks">
+<a class="anchor" href="#Primitives-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primitives Hacks<a class="anchor-link" href="#Primitives-Hacks"> </a>
 </h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Temperature-Converter-(Celcius-to-Kelvin)">
+<a class="anchor" href="#Temperature-Converter-(Celcius-to-Kelvin)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Temperature Converter (Celcius to Kelvin)<a class="anchor-link" href="#Temperature-Converter-(Celcius-to-Kelvin)"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -609,7 +632,7 @@ Enter a degree in Celsius:
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/fastpages-CSA/fastpages/jupyter/2022/08/27/tempconvert.html" hidden></a>
+</script><a class="u-url" href="/fastpages-CSA/fastpages/jupyter/2022/08/27/primitives.html" hidden></a>
 </article>
 
       </div>

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -570,21 +570,34 @@ Average: 75.71
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
 
+        <span class="c1">//we used a wrapper class to introduce our program to the user.</span>
+        <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="s">"This is our program to convert Celcius to Kelvin. We are using it for our AP Chemistry class."</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">aString</span><span class="p">);</span>
 
+        <span class="c1">//we used the string to greet the user</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter your name: "</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter your name as a string: "</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello "</span> <span class="o">+</span> <span class="n">name</span> <span class="p">);</span>
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 
+        <span class="c1">//the integer is used to get the age of the user</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Are you in AP Chemistry: "</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter your age as an integer: "</span><span class="p">);</span>
+        <span class="n">String</span> <span class="n">age</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You are "</span> <span class="o">+</span> <span class="n">age</span> <span class="o">+</span> <span class="s">" years old."</span> <span class="p">);</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+        <span class="c1">//boolean is used to get a true or false answer about whether the user is in AP Chem</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Are you in AP Chemistry? Enter your answer as a Boolean: "</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">chem</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Your answer: "</span> <span class="o">+</span> <span class="n">chem</span><span class="p">);</span>
         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 
+        <span class="c1">//double is used to get a number from the user and convert it using arithmetic expression</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter a degree in Celsius: "</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter a degree in Celsius as a double: "</span><span class="p">);</span>
         <span class="kt">double</span> <span class="n">celsius</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
         <span class="kt">double</span> <span class="n">kelvin</span> <span class="o">=</span> <span class="p">(</span><span class="n">celsius</span> <span class="o">+</span> <span class="mf">273.0</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span> <span class="n">celsius</span> <span class="o">+</span> <span class="s">" degree Celsius is equal to "</span> <span class="o">+</span> <span class="n">kelvin</span> <span class="o">+</span> <span class="s">" in Kelvin"</span><span class="p">);</span>
@@ -604,12 +617,15 @@ Average: 75.71
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Enter your name: 
+<pre>This is our program to convert Celcius to Kelvin. We are using it for our AP Chemistry class.
+Enter your name as a string: 
 Hello Vidhi
-Are you in AP Chemistry: 
+Enter your age as an integer: 
+You are 16 years old.
+Are you in AP Chemistry? Enter your answer as a Boolean: 
 Your answer: True
-Enter a degree in Celsius: 
-68.0 degree Celsius is equal to 341.0 in Kelvin
+Enter a degree in Celsius as a double: 
+46.3 degree Celsius is equal to 319.3 in Kelvin
 </pre>
 </div>
 </div>

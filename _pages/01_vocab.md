@@ -1,4 +1,9 @@
-## Primitive Data Types
+---
+layout: page
+title: Vocab
+permalink: /vocab/
+---
+
 
 - primitive data types: lowercase
     - boolean

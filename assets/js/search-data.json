@@ -113,6 +113,17 @@
   
 
   
+      ,"page1": {
+          "title": "Vocab",
+          "content": "primitive data types: lowercase boolean | integers | doubles | float | character | . | non primitive data types: uppercase wrapper class - string | arrays | . | .",
+          "url": "https://vidhikulkarni.github.io/fastpages-CSA/vocab/",
+          "relUrl": "/vocab/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
 
@@ -136,7 +147,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://vidhikulkarni.github.io/fastpages-CSA/robots.txt",

@@ -21,13 +21,14 @@ tags: lesson
 I wrote a note to my mom. This was an important experience for me because it allowed me to reflect on everything she does for me. It also allowed for her to know that I am grateful for her.
 
 
-## Gratitude List
+## My Gratitude List
 - My health 
 - School
 - Friends
 - Family
 - San Diego
 - Technology
+
 
 ## My Goals
 1. Work hard and be happy this year

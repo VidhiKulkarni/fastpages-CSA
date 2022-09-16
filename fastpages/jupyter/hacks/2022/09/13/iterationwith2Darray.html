@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      8 min read
     
 </span></p>
 
@@ -379,279 +379,6 @@ No more monkeys jumping on the bed
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// This is my spider 1D array printed horizontally. </span>
-<span class="kd">class</span> <span class="nc">MonkeyLoop</span> <span class="p">{</span>
-    <span class="c1">//The area between class definition and the 1st method is where we keep data for object in Java</span>
-    <span class="n">String</span> <span class="o">[][]</span> <span class="n">monkeys</span><span class="p">;</span>    <span class="c1">//2D Array: AP CSA Unit 8: 2D array of strings</span>
-                            <span class="c1">//2D array is like a grid [x][y]</span>
-                            <span class="c1">// or like a spreadsheet [row][column]</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * Constructor initializes a 2D array of Monkeys</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="nf">MonkeyLoop</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">//Storing Data in 2D arrays</span>
-        <span class="n">monkeys</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">//2D array above is just a name, "new" makes a container ("object")</span>
-                <span class="c1">//Spider 0</span>
-                <span class="p">{</span>
-                        <span class="s">"  / _ \ "</span><span class="p">,</span>    <span class="c1">//  </span>
-                        <span class="s">"\_\(_)/_/"</span><span class="p">,</span> 
-                        <span class="s">" _//"</span><span class="err">\\</span><span class="n">_</span><span class="o">/</span><span class="s">" ,     </span>
-<span class="s">                        "</span>  <span class="o">/</span>   <span class="err">\</span>  <span class="s">"      </span>
-<span class="s">                },</span>
-
-<span class="s">                //Spider 1</span>
-<span class="s">                {</span>
-<span class="s">                        "</span> <span class="n">ʕ</span><span class="err">༼</span> <span class="err">◕</span><span class="n">_</span><span class="err">◕</span> <span class="err">༽</span><span class="n">ʔ</span><span class="s">",       //[1][0]</span>
-<span class="s">                        "</span>  <span class="err">\\</span><span class="n">_</span><span class="err">⎏</span><span class="n">_</span><span class="o">/</span>  <span class="s">",</span>
-<span class="s">                        "</span>  <span class="o">++</span><span class="mi">1</span><span class="o">++</span>  <span class="s">",</span>
-<span class="s">                        "</span>   <span class="err">⌋</span> <span class="err">⌊</span>   <span class="s">"</span>
-<span class="s">                },</span>
-<span class="s">                //Monkey 2</span>
-<span class="s">                {</span>
-<span class="s">                        "</span> <span class="n">ʕ</span><span class="p">(</span><span class="err">▀</span> <span class="err">⍡</span> <span class="err">▀</span><span class="p">)</span><span class="n">ʔ</span><span class="s">",       //[2][0]</span>
-<span class="s">                        "</span>  <span class="err">\\</span><span class="n">_</span><span class="err">⎐</span><span class="n">_</span><span class="o">/</span> <span class="s">",</span>
-<span class="s">                        "</span>  <span class="o">&lt;-</span><span class="mi">2</span><span class="o">-&gt;</span>  <span class="s">",</span>
-<span class="s">                        "</span>  <span class="err">〈</span>  <span class="err">〉</span> <span class="s">"</span>
-<span class="s">                },</span>
-<span class="s">                //Monkey 3</span>
-<span class="s">                {</span>
-<span class="s">                        "</span><span class="n">ʕ</span> <span class="err">͡°</span> <span class="err">͜</span><span class="n">ʖ</span> <span class="err">°</span> <span class="err">͡</span><span class="n">ʔ</span><span class="s">",        //[3][0]</span>
-<span class="s">                        "</span>  <span class="err">\\</span><span class="n">_</span><span class="err">⍾</span><span class="n">_</span><span class="o">/</span>  <span class="s">",</span>
-<span class="s">                        "</span>  <span class="o">==</span><span class="mi">3</span><span class="o">==</span>  <span class="s">",</span>
-<span class="s">                        "</span>  <span class="n">_</span><span class="o">/</span> <span class="err">\\</span><span class="n">_</span>  <span class="s">"</span>
-<span class="s">                },</span>
-<span class="s">                //Monkey 4</span>
-<span class="s">                {</span>
-<span class="s">                        "</span>  <span class="p">(</span><span class="err">◕‿◕✿</span><span class="p">)</span> <span class="s">",          //[4][0]</span>
-<span class="s">                        "</span>  <span class="err">\\</span><span class="n">_</span><span class="err">⍾</span><span class="n">_</span><span class="o">/</span> <span class="s">",          //[4][1]</span>
-<span class="s">                        "</span>  <span class="o">==</span><span class="mi">4</span><span class="o">==</span>  <span class="s">",          //[4][2]</span>
-<span class="s">                        "</span>  <span class="n">_</span><span class="o">/</span> <span class="err">\\</span><span class="n">_</span> <span class="s">"           //[4][3]</span>
-<span class="s">                },</span>
-
-<span class="s">        };</span>
-<span class="s">    }</span>
-
-<span class="s">    /**</span>
-<span class="s">     * Loop and print monkeys in array</span>
-<span class="s">     * ... repeat until you reach zero  ...</span>
-<span class="s">     */</span>
-<span class="s">    public void printPoem() {</span>
-<span class="s">        //begin the poem</span>
-<span class="s">        System.out.println();</span>
-<span class="s">        System.out.println("</span><span class="n">Monkey</span> <span class="n">Jumpers</span> <span class="n">Poem</span> <span class="n">in</span> <span class="n">Java</span> <span class="n">Loopy</span><span class="s">");</span>
-
-<span class="s">        // monkeys (non-primitive) defined in constructor knows its length</span>
-<span class="s">        int monkeyCount = monkeys.length;</span>
-<span class="s">        for (int i = monkeyCount; i &gt;= 1; i--)  //loops through 2D array length backwards</span>
-<span class="s">        {</span>
-
-<span class="s">            //this print statement shows current count of Monkeys</span>
-<span class="s">            //  concatenation (+) of the loop variable and string to form a countdown message</span>
-<span class="s">            System.out.println(i + "</span> <span class="n">little</span> <span class="n">monkeys</span> <span class="n">jumping</span> <span class="n">on</span> <span class="n">the</span> <span class="n">bed</span><span class="p">...</span><span class="s">");</span>
-
-<span class="s">            //how many separate parts are there in a monkey monkey?</span>
-<span class="s">            for (int row = 0; row &lt; monkeyCount; row++) {  //cycles through "</span><span class="n">cells</span><span class="s">" of 2d array</span>
-
-<span class="s">                /*cycles through columns to print</span>
-<span class="s">                each monkey part by part, will eventually print entire column*/</span>
-<span class="s">                for (int col = 0; col &lt; monkeys[row].length; col++) {</span>
-
-<span class="s">                    // prints specific part of the monkey from the column</span>
-<span class="s">                    System.out.print(monkeys[row][col] + "</span> <span class="s">");</span>
-
-<span class="s">                    //this is new line between separate parts</span>
-<span class="s">                    System.out.println();</span>
-<span class="s">                }</span>
-
-<span class="s">                //this new line gives separation between stanza of poem</span>
-<span class="s">                System.out.println();</span>
-<span class="s">            }</span>
-
-<span class="s">            //countdown for poem, decrementing monkeyCount variable by 1</span>
-<span class="s">            monkeyCount -= 1;</span>
-<span class="s">        }</span>
-
-<span class="s">        //out of all the loops, prints finishing messages</span>
-<span class="s">        System.out.println("</span><span class="n">No</span> <span class="n">more</span> <span class="n">monkeys</span> <span class="n">jumping</span> <span class="n">on</span> <span class="n">the</span> <span class="n">bed</span><span class="s">");</span>
-<span class="s">        System.out.println("</span><span class="mo">0000000000000000000000000000000000</span><span class="s">");</span>
-<span class="s">        System.out.println("</span>             <span class="n">THE</span> <span class="n">END</span>              <span class="s">");</span>
-<span class="s">    }</span>
-
-<span class="s">    /**</span>
-<span class="s">    * A Java Driver/Test method that is the entry point for execution</span>
-<span class="s">    */</span>
-<span class="s">    public static void main(String[] args)  {</span>
-<span class="s">        new MonkeyLoop().printPoem();   //a new monkey list and output in one step</span>
-<span class="s">    }</span>
-
-<span class="s">}</span>
-<span class="s">MonkeyLoop.main(null);</span>
-
-
-<span class="s">  / _ \</span>
-<span class="s">\_\(_)/_/</span>
-<span class="s"> _//"</span><span class="err">\\</span><span class="n">_</span> 
-  <span class="o">/</span>   <span class="err">\</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * Creator: Nighthawk Coding Society</span>
-<span class="cm"> * Mini Lab Name: Hello Series,featuring Monkey Jumpers</span>
-<span class="cm"> */</span>
-
-<span class="cm">/**</span>
-<span class="cm"> * Class for Monkeys: a 2D array of Monkeys</span>
-<span class="cm"> * As well as method to print the Poem</span>
-<span class="cm"> */</span>
-<span class="kd">class</span> <span class="nc">MonkeyLoop</span> <span class="p">{</span>
-    <span class="c1">//The area between class definition and the 1st method is where we keep data for object in Java</span>
-    <span class="n">String</span> <span class="o">[][]</span> <span class="n">monkeys</span><span class="p">;</span>    <span class="c1">//2D Array: AP CSA Unit 8: 2D array of strings</span>
-                            <span class="c1">//2D array is like a grid [x][y]</span>
-                            <span class="c1">// or like a spreadsheet [row][column]</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * Constructor initializes a 2D array of Monkeys</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="nf">MonkeyLoop</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">//Storing Data in 2D arrays</span>
-        <span class="n">monkeys</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">//2D array above is just a name, "new" makes a container ("object")</span>
-                <span class="c1">//Boat 0</span>
-                <span class="p">{</span>
-                        <span class="s">"    |\ "</span><span class="p">,</span>      <span class="c1">//[0][0] flag</span>
-                        <span class="s">"    |/"</span><span class="p">,</span>      <span class="c1">//[0][1] flag</span>
-                        <span class="s">"\__ |__/"</span><span class="p">,</span>       <span class="c1">//[0][2] body</span>
-                        <span class="s">" \____/"</span>        <span class="c1">//[0][3] boat</span>
-                <span class="p">},</span>
-                <span class="c1">//Monkey 1</span>
-                <span class="p">{</span>
-                        <span class="s">"      |\ "</span><span class="p">,</span>      <span class="c1">//[0][0] flag</span>
-                        <span class="s">"      |/"</span><span class="p">,</span>      <span class="c1">//[0][1] flag</span>
-                        <span class="s">"  \__ |__/"</span><span class="p">,</span>       <span class="c1">//[0][2] body</span>
-                        <span class="s">"   \____/"</span>        <span class="c1">//[0][3] boat</span>
-                <span class="p">},</span>
-                <span class="c1">//Monkey 2</span>
-                <span class="p">{</span>
-                        <span class="s">" ʕ(▀ ⍡ ▀)ʔ"</span><span class="p">,</span>       <span class="c1">//[2][0]</span>
-                        <span class="s">"  \\_⎐_/ "</span><span class="p">,</span>
-                        <span class="s">"  &lt;-2-&gt;  "</span><span class="p">,</span>
-                        <span class="s">"  〈  〉 "</span>
-                <span class="p">},</span>
-                <span class="c1">//Monkey 3</span>
-                <span class="p">{</span>
-                        <span class="s">"ʕ ͡° ͜ʖ ° ͡ʔ"</span><span class="p">,</span>        <span class="c1">//[3][0]</span>
-                        <span class="s">"  \\_⍾_/  "</span><span class="p">,</span>
-                        <span class="s">"  ==3==  "</span><span class="p">,</span>
-                        <span class="s">"  _/ \\_  "</span>
-                <span class="p">},</span>
-                <span class="c1">//Monkey 4</span>
-                <span class="p">{</span>
-                        <span class="s">"  (◕‿◕✿) "</span><span class="p">,</span>          <span class="c1">//[4][0]</span>
-                        <span class="s">"  \\_⍾_/ "</span><span class="p">,</span>          <span class="c1">//[4][1]</span>
-                        <span class="s">"  ==4==  "</span><span class="p">,</span>          <span class="c1">//[4][2]</span>
-                        <span class="s">"  _/ \\_ "</span>           <span class="c1">//[4][3]</span>
-                <span class="p">},</span>
-
-        <span class="p">};</span>
-    <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * Loop and print monkeys in array</span>
-<span class="cm">     * ... repeat until you reach zero  ...</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">//begin the poem</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Monkey Jumpers Poem in Java Loopy"</span><span class="p">);</span>
-
-        <span class="c1">// monkeys (non-primitive) defined in constructor knows its length</span>
-        <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeys</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">//loops through 2D array length backwards</span>
-        <span class="p">{</span>
-
-            <span class="c1">//this print statement shows current count of Monkeys</span>
-            <span class="c1">//  concatenation (+) of the loop variable and string to form a countdown message</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" little monkeys jumping on the bed..."</span><span class="p">);</span>
-
-            <span class="c1">//how many separate parts are there in a monkey monkey?</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through "cells" of 2d array</span>
-
-                <span class="cm">/*cycles through columns to print</span>
-<span class="cm">                each monkey part by part, will eventually print entire column*/</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-
-                    <span class="c1">// prints specific part of the monkey from the column</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
-
-                    <span class="c1">//this is new line between separate parts</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-                <span class="p">}</span>
-
-                <span class="c1">//this new line gives separation between stanza of poem</span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-            <span class="p">}</span>
-
-            <span class="c1">//countdown for poem, decrementing monkeyCount variable by 1</span>
-            <span class="n">monkeyCount</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="c1">//out of all the loops, prints finishing messages</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No more monkeys jumping on the bed"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"0000000000000000000000000000000000"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"             THE END              "</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">    * A Java Driver/Test method that is the entry point for execution</span>
-<span class="cm">    */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
-        <span class="k">new</span> <span class="n">MonkeyLoop</span><span class="p">().</span><span class="na">printPoem</span><span class="p">();</span>   <span class="c1">//a new monkey list and output in one step</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-<span class="n">MonkeyLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>print("        |\ ")
-print("        |/ ")
-print("    \__ |__/ ")
-print("     \____/</code></pre>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -670,12 +397,14 @@ print("     \____/</code></pre>
 </ol>
 <p>Each monkey is not an object because we are not defining objects in a class. We are printing a 2-dimensional array, so each monkey is a different row in the array.</p>
 <ol>
-<li>
-<p>Build an where the monkey is an object versus two-dimensional array. This would be leading into Unit 5 requirements.</p>
-</li>
-<li>
-<p>Study loops and zero based counting</p>
-</li>
+<li>Build an where the monkey is an object versus two-dimensional array. This would be leading into Unit 5 requirements.</li>
+</ol>
+<p>My code is shown above. I used a one dimensional array to print the ants horizontally.</p>
+<ol>
+<li>Study loops and zero based counting</li>
+</ol>
+<p>Zero based counting is a way of numbering in which the first element is assigned an in</p>
+<ol>
 <li>
 <p>Study two-dimensional (2D) array references</p>
 </li>
@@ -687,6 +416,202 @@ print("     \____/</code></pre>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Class for Monkeys: a 2D array of Monkeys</span>
+<span class="cm"> * As well as method to print the Poem</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">MonkeyLoop</span> <span class="p">{</span>
+    <span class="c1">// The area between class definition and the 1st method is where we keep data for object in Java</span>
+    <span class="n">String</span> <span class="o">[][]</span> <span class="n">monkeys</span><span class="p">;</span>    <span class="c1">// 2D Array: AP CSA Unit 8: 2D array of strings</span>
+                            <span class="c1">// 2D array is like a grid [x][y]</span>
+                            <span class="c1">// or like a spreadsheet [row][column]</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor initializes a 2D array of Monkeys</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">MonkeyLoop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//Storing Data in 2D arrays</span>
+        <span class="n">monkeys</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">// 2D array above is just a name, "new" makes a container ("object")</span>
+                <span class="c1">//Ant 0</span>
+                <span class="p">{</span>
+                        <span class="s">" -(**)- "</span><span class="p">,</span>      <span class="c1">//[0][0] eyes</span>
+                        <span class="s">" -(0 )- "</span><span class="p">,</span>      <span class="c1">//[0][1] chin</span>
+                        <span class="s">" -(__)- "</span><span class="p">,</span>       <span class="c1">//[0][2] body</span>
+                        
+                <span class="p">},</span>
+                <span class="c1">//Ant 1</span>
+                <span class="p">{</span>
+                        <span class="s">" -(**)- "</span><span class="p">,</span>      <span class="c1">//[1][0] eyes</span>
+                        <span class="s">" -(1 )- "</span><span class="p">,</span>      <span class="c1">//[1][1] chin</span>
+                        <span class="s">" -(..)- "</span><span class="p">,</span>      <span class="c1">//[1][2] body</span>
+                <span class="p">},</span>
+                <span class="c1">//Ant 2</span>
+                <span class="p">{</span>
+                        <span class="s">" -(**)- "</span><span class="p">,</span>       <span class="c1">//[2][0] eyes</span>
+                        <span class="s">" -(2 )- "</span><span class="p">,</span>       <span class="c1">//[2][1] chin</span>
+                        <span class="s">" -(**)- "</span><span class="p">,</span>       <span class="c1">//[2][2] body</span>
+                <span class="p">},</span>
+                <span class="c1">//Ant 3</span>
+                <span class="p">{</span>
+                        <span class="s">" -(**)- "</span><span class="p">,</span>        <span class="c1">//[3][0] eyes</span>
+                        <span class="s">" -(3 )- "</span><span class="p">,</span>        <span class="c1">//[3][1] chin</span>
+                        <span class="s">" -(--)- "</span><span class="p">,</span>        <span class="c1">//[3][2] body</span>
+                <span class="p">},</span>
+                <span class="c1">//Ant 4</span>
+                <span class="p">{</span>
+                        <span class="s">" -(--)- "</span><span class="p">,</span>          <span class="c1">//[4][0] eyes</span>
+                        <span class="s">" -(4 )- "</span><span class="p">,</span>          <span class="c1">//[4][1] chin</span>
+                        <span class="s">" -(**)- "</span><span class="p">,</span>          <span class="c1">//[4][2] body</span>
+                <span class="p">},</span>
+
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Loop and print monkeys in array</span>
+<span class="cm">     * ... repeat until you reach zero  ...</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// begin the poem</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Marching Ants Poem in Java Loop"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+        <span class="c1">// monkeys (non-primitive) defined in constructor knows its length</span>
+        <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeys</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="c1">// number of monkeys</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">// loops through 2D array length backwards</span>
+        <span class="p">{</span>
+
+            <span class="c1">// this print statement shows current count of Monkeys</span>
+            <span class="c1">//  concatenation (+) of the loop variable and string to form a countdown message</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" the ants go marching one by one... horrah! horrah!"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the little one stopped to play the drums"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"and they all go marching down"</span><span class="p">);</span>
+
+            <span class="c1">// conditional determining last line of each stanza</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"'Put those monkeys right to bed!'"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"'No more monkeys jumping on the bed!'"</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="c1">// start by determining how many horizontal rows for an individual monkey will be in the output</span>
+                <span class="c1">// in this case, 4 rows for eyes, chin, body and legs</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">col</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">){</span>
+
+                <span class="c1">// goal is to print first row of all eyes, then print next row of all chins...</span>
+
+                <span class="c1">// incrementing by row to specify which monkey</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">){</span>
+
+                    <span class="c1">// print certain body part</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">);</span>
+
+                    <span class="c1">// separate body part from other monkeys' with tab</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"\t"</span><span class="p">);</span>
+                <span class="p">}</span>
+
+                <span class="c1">// new line for new body part</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span> <span class="c1">// new stanza</span>
+
+            <span class="c1">// countdown for poem, decrementing monkeyCount variable by 1</span>
+            <span class="n">monkeyCount</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// out of all the loops, prints finishing messages</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No more ants marching up the hill"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"0000000000000000000000000000000000"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"             THE END              "</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">    * A Java Driver/Test method that is the entry point for execution</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="k">new</span> <span class="n">MonkeyLoop</span><span class="p">().</span><span class="na">printPoem</span><span class="p">();</span>   <span class="c1">// a new monkey list and output in one step</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+<span class="n">MonkeyLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Marching Ants Poem in Java Loop
+
+5 the ants go marching one by one... horrah! horrah!
+the little one stopped to play the drums
+and they all go marching down
+'No more monkeys jumping on the bed!'
+ -(**)- 	 -(**)- 	 -(**)- 	 -(**)- 	 -(--)- 	
+ -(0 )- 	 -(1 )- 	 -(2 )- 	 -(3 )- 	 -(4 )- 	
+ -(__)- 	 -(..)- 	 -(**)- 	 -(--)- 	 -(**)- 	
+
+4 the ants go marching one by one... horrah! horrah!
+the little one stopped to play the drums
+and they all go marching down
+'No more monkeys jumping on the bed!'
+ -(**)- 	 -(**)- 	 -(**)- 	 -(**)- 	
+ -(0 )- 	 -(1 )- 	 -(2 )- 	 -(3 )- 	
+ -(__)- 	 -(..)- 	 -(**)- 	 -(--)- 	
+
+3 the ants go marching one by one... horrah! horrah!
+the little one stopped to play the drums
+and they all go marching down
+'No more monkeys jumping on the bed!'
+ -(**)- 	 -(**)- 	 -(**)- 	
+ -(0 )- 	 -(1 )- 	 -(2 )- 	
+ -(__)- 	 -(..)- 	 -(**)- 	
+
+2 the ants go marching one by one... horrah! horrah!
+the little one stopped to play the drums
+and they all go marching down
+'No more monkeys jumping on the bed!'
+ -(**)- 	 -(**)- 	
+ -(0 )- 	 -(1 )- 	
+ -(__)- 	 -(..)- 	
+
+1 the ants go marching one by one... horrah! horrah!
+the little one stopped to play the drums
+and they all go marching down
+'Put those monkeys right to bed!'
+ -(**)- 	
+ -(0 )- 	
+ -(__)- 	
+
+No more ants marching up the hill
+0000000000000000000000000000000000
+             THE END              
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

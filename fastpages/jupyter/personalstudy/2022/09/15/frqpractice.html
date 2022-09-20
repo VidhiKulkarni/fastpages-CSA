@@ -359,8 +359,8 @@ returns 6.</p>
 <span class="p">{</span>
  <span class="kt">int</span> <span class="n">startDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
  <span class="kt">int</span> <span class="n">nthDay</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
- <span class="kt">int</span> <span class="n">returnDay</span> <span class="o">=</span> <span class="p">(</span><span class="n">startDay</span> <span class="o">+</span> <span class="n">nthDay</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
- <span class="k">return</span> <span class="n">returnDay</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">returnDay</span> <span class="o">=</span> <span class="p">(</span><span class="n">startDay</span> <span class="o">+</span> <span class="n">nthDay</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// the start and last day get added and -1 and /7 in order to find which day of the week it is </span>
+ <span class="k">return</span> <span class="n">returnDay</span><span class="p">;</span> <span class="c1">//the returned number will tell us how many days away it is from the start day</span>
 <span class="p">}</span>
 </pre></div>
 

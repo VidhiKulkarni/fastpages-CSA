@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -390,10 +390,13 @@ No more monkeys jumping on the bed
 </ol>
 <p>This program is more of an Imperative Programming Style because we are just printing a 2-dimensional array. There are no objects or values being assigned in the program. There are also no classes in the program.</p>
 <ol>
-<li>Observe variable assignments.</li>
-</ol>
-<ol>
-<li>Is each Monkey an object?</li>
+<li>
+<p>Observe variable assignments.
+The variables are assigned within the class.</p>
+</li>
+<li>
+<p>Is each Monkey an object?</p>
+</li>
 </ol>
 <p>Each monkey is not an object because we are not defining objects in a class. We are printing a 2-dimensional array, so each monkey is a different row in the array.</p>
 <ol>
@@ -403,15 +406,15 @@ No more monkeys jumping on the bed
 <ol>
 <li>Study loops and zero based counting</li>
 </ol>
-<p>Zero based counting is a way of numbering in which the first element is assigned an in</p>
+<p>Zero based counting is a way of numbering in which the initial element of a sequence is assigned the index 0, rather than the index 1 as is typical in everyday non-mathematical or non-programming circumstances. In computer programming, a loop is a sequence of instruction s that is continually repeated until a certain condition is reached.</p>
 <ol>
-<li>
-<p>Study two-dimensional (2D) array references</p>
-</li>
-<li>
-<p>Explain different way you can access a 2D array</p>
-</li>
+<li>Study two-dimensional (2D) array references</li>
 </ol>
+<p>Each cell of the array is a variable that can hold a value and works like any variable. As with one dimensional arrays, every cell in a 2D array is of the same type. The type can be a primitive type or an object reference type.</p>
+<ol>
+<li>Explain different way you can access a 2D array</li>
+</ol>
+<p>In Java, when accessing the element from a 2D array using arr[first][second] , the first index can be thought of as the desired row, and the second index is used for the desired column. Just like 1D arrays, 2D arrays are indexed starting at 0 .</p>
 
 </div>
 </div>
@@ -492,7 +495,8 @@ No more monkeys jumping on the bed
             <span class="c1">// this print statement shows current count of Monkeys</span>
             <span class="c1">//  concatenation (+) of the loop variable and string to form a countdown message</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" the ants go marching one by one... horrah! horrah!"</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the little one stopped to play the drums"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" the ants go marching one by one... horrah! horrah!"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the ants go marching one by one, the little one stopped to play the drum"</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"and they all go marching down"</span><span class="p">);</span>
 
             <span class="c1">// conditional determining last line of each stanza</span>
@@ -560,7 +564,8 @@ No more monkeys jumping on the bed
 Marching Ants Poem in Java Loop
 
 5 the ants go marching one by one... horrah! horrah!
-the little one stopped to play the drums
+5 the ants go marching one by one... horrah! horrah!
+the ants go marching one by one, the little one stopped to play the drum
 and they all go marching down
 'No more monkeys jumping on the bed!'
  -(**)- 	 -(**)- 	 -(**)- 	 -(**)- 	 -(--)- 	
@@ -568,7 +573,8 @@ and they all go marching down
  -(__)- 	 -(..)- 	 -(**)- 	 -(--)- 	 -(**)- 	
 
 4 the ants go marching one by one... horrah! horrah!
-the little one stopped to play the drums
+4 the ants go marching one by one... horrah! horrah!
+the ants go marching one by one, the little one stopped to play the drum
 and they all go marching down
 'No more monkeys jumping on the bed!'
  -(**)- 	 -(**)- 	 -(**)- 	 -(**)- 	
@@ -576,7 +582,8 @@ and they all go marching down
  -(__)- 	 -(..)- 	 -(**)- 	 -(--)- 	
 
 3 the ants go marching one by one... horrah! horrah!
-the little one stopped to play the drums
+3 the ants go marching one by one... horrah! horrah!
+the ants go marching one by one, the little one stopped to play the drum
 and they all go marching down
 'No more monkeys jumping on the bed!'
  -(**)- 	 -(**)- 	 -(**)- 	
@@ -584,7 +591,8 @@ and they all go marching down
  -(__)- 	 -(..)- 	 -(**)- 	
 
 2 the ants go marching one by one... horrah! horrah!
-the little one stopped to play the drums
+2 the ants go marching one by one... horrah! horrah!
+the ants go marching one by one, the little one stopped to play the drum
 and they all go marching down
 'No more monkeys jumping on the bed!'
  -(**)- 	 -(**)- 	
@@ -592,7 +600,8 @@ and they all go marching down
  -(__)- 	 -(..)- 	
 
 1 the ants go marching one by one... horrah! horrah!
-the little one stopped to play the drums
+1 the ants go marching one by one... horrah! horrah!
+the ants go marching one by one, the little one stopped to play the drum
 and they all go marching down
 'Put those monkeys right to bed!'
  -(**)- 	

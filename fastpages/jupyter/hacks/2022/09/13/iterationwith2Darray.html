@@ -427,21 +427,21 @@ The variables are assigned within the class.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * Class for Monkeys: a 2D array of Monkeys</span>
+<span class="cm"> * Class for Monkeys: a 2D array of Ants</span>
 <span class="cm"> * As well as method to print the Poem</span>
 <span class="cm"> */</span>
-<span class="kd">class</span> <span class="nc">MonkeyLoop</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="nc">AntLoop</span> <span class="p">{</span>
     <span class="c1">// The area between class definition and the 1st method is where we keep data for object in Java</span>
-    <span class="n">String</span> <span class="o">[][]</span> <span class="n">monkeys</span><span class="p">;</span>    <span class="c1">// 2D Array: AP CSA Unit 8: 2D array of strings</span>
+    <span class="n">String</span> <span class="o">[][]</span> <span class="n">ants</span><span class="p">;</span>    <span class="c1">// 2D Array: AP CSA Unit 8: 2D array of strings</span>
                             <span class="c1">// 2D array is like a grid [x][y]</span>
                             <span class="c1">// or like a spreadsheet [row][column]</span>
 
     <span class="cm">/**</span>
 <span class="cm">     * Constructor initializes a 2D array of Monkeys</span>
 <span class="cm">     */</span>
-    <span class="kd">public</span> <span class="nf">MonkeyLoop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">AntLoop</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">//Storing Data in 2D arrays</span>
-        <span class="n">monkeys</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">// 2D array above is just a name, "new" makes a container ("object")</span>
+        <span class="n">ants</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">// 2D array above is just a name, "new" makes a container ("object")</span>
                 <span class="c1">//Ant 0</span>
                 <span class="p">{</span>
                         <span class="s">" -(**)- "</span><span class="p">,</span>      <span class="c1">//[0][0] eyes</span>
@@ -478,7 +478,7 @@ The variables are assigned within the class.</p>
     <span class="p">}</span>
 
     <span class="cm">/**</span>
-<span class="cm">     * Loop and print monkeys in array</span>
+<span class="cm">     * Loop and print ants in array</span>
 <span class="cm">     * ... repeat until you reach zero  ...</span>
 <span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
@@ -488,8 +488,8 @@ The variables are assigned within the class.</p>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
 
         <span class="c1">// monkeys (non-primitive) defined in constructor knows its length</span>
-        <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeys</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="c1">// number of monkeys</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">// loops through 2D array length backwards</span>
+        <span class="kt">int</span> <span class="n">antCount</span> <span class="o">=</span> <span class="n">ants</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="c1">// number of monkeys</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">antCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">// loops through 2D array length backwards</span>
         <span class="p">{</span>
 
             <span class="c1">// this print statement shows current count of Monkeys</span>
@@ -509,15 +509,15 @@ The variables are assigned within the class.</p>
 
             <span class="c1">// start by determining how many horizontal rows for an individual monkey will be in the output</span>
                 <span class="c1">// in this case, 4 rows for eyes, chin, body and legs</span>
-            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">monkeys</span><span class="o">[</span><span class="n">col</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">ants</span><span class="o">[</span><span class="n">col</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">){</span>
 
                 <span class="c1">// goal is to print first row of all eyes, then print next row of all chins...</span>
 
-                <span class="c1">// incrementing by row to specify which monkey</span>
-                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">){</span>
+                <span class="c1">// incrementing by row to specify which ant</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">antCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">){</span>
 
                     <span class="c1">// print certain body part</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeys</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">ants</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">);</span>
 
                     <span class="c1">// separate body part from other monkeys' with tab</span>
                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"\t"</span><span class="p">);</span>
@@ -530,7 +530,7 @@ The variables are assigned within the class.</p>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span> <span class="c1">// new stanza</span>
 
             <span class="c1">// countdown for poem, decrementing monkeyCount variable by 1</span>
-            <span class="n">monkeyCount</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">antCount</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="c1">// out of all the loops, prints finishing messages</span>
@@ -543,11 +543,11 @@ The variables are assigned within the class.</p>
 <span class="cm">    * A Java Driver/Test method that is the entry point for execution</span>
 <span class="cm">    */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
-        <span class="k">new</span> <span class="n">MonkeyLoop</span><span class="p">().</span><span class="na">printPoem</span><span class="p">();</span>   <span class="c1">// a new monkey list and output in one step</span>
+        <span class="k">new</span> <span class="n">AntLoop</span><span class="p">().</span><span class="na">printPoem</span><span class="p">();</span>   <span class="c1">// a new monkey list and output in one step</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="n">MonkeyLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">AntLoop</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>

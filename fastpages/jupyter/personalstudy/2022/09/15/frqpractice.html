@@ -270,17 +270,19 @@ receive full credit.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">numberOfLeapYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//keep track of number of leap years</span>
+<span class="c1">//loop through year 1 to year 2</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">numberOfLeapYears</span><span class="p">(</span><span class="kt">int</span> <span class="n">year1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">year1</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="n">year2</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span> <span class="c1">//loop through the years as long as they are less than or equal to year 2 -&gt; keep adding to years</span>
     <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">isLeapYear</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">isLeapYear</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="c1">//if the year is a leap year</span>
     <span class="p">{</span>
-        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span> <span class="c1">//increase count variable by 1</span>
     <span class="p">}</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">count</span><span class="p">;</span> <span class="c1">//return count (the number of times a leap year was found)</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -357,8 +359,8 @@ returns 6.</p>
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
 <span class="p">{</span>
- <span class="kt">int</span> <span class="n">startDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
- <span class="kt">int</span> <span class="n">nthDay</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+ <span class="kt">int</span> <span class="n">startDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span> <span class="c1">//find first day of year</span>
+ <span class="kt">int</span> <span class="n">nthDay</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span> <span class="c1">//find day of year</span>
  <span class="kt">int</span> <span class="n">returnDay</span> <span class="o">=</span> <span class="p">(</span><span class="n">startDay</span> <span class="o">+</span> <span class="n">nthDay</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// the start and last day get added and -1 (because of Sunday) and /7 in order to find which day of the week it is </span>
  <span class="k">return</span> <span class="n">returnDay</span><span class="p">;</span> <span class="c1">//the returned number will tell us how many days away it is from the start day</span>
 <span class="p">}</span>

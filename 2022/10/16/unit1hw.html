@@ -154,14 +154,14 @@ Char</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="n">DownloadInfo</span> <span class="n">getDownloadInfo</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">define</span> <span class="n">the</span> <span class="k">class</span>
-    <span class="nc">for</span> <span class="p">(</span><span class="n">DownloadInfo</span> <span class="n">info</span> <span class="p">:</span> <span class="n">downloadList</span><span class="p">){</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">getTitle</span><span class="p">()</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">title</span><span class="p">)){</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">DownloadInfo</span> <span class="nf">getDownloadInfo</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">for</span> <span class="p">(</span><span class="n">DownloadInfo</span> <span class="n">info</span> <span class="p">:</span> <span class="n">downloadList</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">title</span><span class="p">)){</span>
      <span class="k">return</span> <span class="n">info</span><span class="p">;</span>
      <span class="p">}</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">null</span><span class="p">;</span> <span class="o">//</span> <span class="n">method</span> <span class="n">inside</span> <span class="n">the</span> <span class="k">class</span>
-    <span class="err">}</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// method inside the class</span>
+    <span class="p">}</span>
 </pre></div>
 
     </div>
@@ -185,14 +185,14 @@ Char</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="n">void</span> <span class="n">updateDownloads</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="p">)</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateDownloads</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">title</span> <span class="p">:</span> <span class="n">titles</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">DownloadInfo</span> <span class="n">foundInfo</span> <span class="o">=</span> <span class="n">getDownloadInfo</span><span class="p">(</span><span class="n">title</span><span class="p">);</span> <span class="o">//</span> <span class="n">calls</span> <span class="n">method</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">foundInfo</span> <span class="o">==</span> <span class="n">null</span><span class="p">){</span>
-    <span class="n">downloadList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new</span> <span class="n">DownloadInfo</span><span class="p">(</span><span class="n">title</span><span class="p">));</span> <span class="o">//</span> <span class="n">makes</span> <span class="n">new</span> <span class="nb">object</span>
+    <span class="n">DownloadInfo</span> <span class="n">foundInfo</span> <span class="o">=</span> <span class="n">getDownloadInfo</span><span class="p">(</span><span class="n">title</span><span class="p">);</span> <span class="c1">// calls method</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">foundInfo</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+    <span class="n">downloadList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">DownloadInfo</span><span class="p">(</span><span class="n">title</span><span class="p">));</span> <span class="c1">// makes new object</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="p">{</span>
-    <span class="n">foundInfo</span><span class="o">.</span><span class="n">incrementTimesDownloaded</span><span class="p">();</span>
+    <span class="n">foundInfo</span><span class="p">.</span><span class="na">incrementTimesDownloaded</span><span class="p">();</span>
     <span class="p">}</span>
     <span class="p">}</span>
    <span class="p">}</span>
@@ -218,69 +218,69 @@ Char</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">java</span> <span class="n">style</span> <span class="n">to</span> <span class="kn">import</span> <span class="nn">library</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// java style to import library</span>
 <span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-<span class="o">//</span> <span class="k">class</span> <span class="nc">must</span> <span class="n">alway</span> <span class="n">have</span> <span class="mi">1</span><span class="n">st</span> <span class="n">letter</span> <span class="k">as</span> <span class="n">uppercase</span><span class="p">,</span> <span class="n">CamelCase</span> <span class="ow">is</span> <span class="n">Java</span> <span class="n">Class</span> <span class="n">convention</span>
-<span class="n">public</span> <span class="k">class</span> <span class="nc">ScanPrimitives</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>    
-        <span class="n">Scanner</span> <span class="n">myObj</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="ow">in</span><span class="p">);</span>  <span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">Scanner</span> <span class="nb">object</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Is the final in a seperate category? True to False&quot;</span><span class="p">);</span>
+<span class="c1">// class must alway have 1st letter as uppercase, CamelCase is Java Class convention</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScanPrimitives</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>    
+        <span class="n">Scanner</span> <span class="n">myObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// Create a Scanner object</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Is the final in a seperate category? True to False&quot;</span><span class="p">);</span>
 
-        <span class="n">boolean</span> <span class="n">tof</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextBoolean</span><span class="p">();</span>  <span class="o">//</span> <span class="n">Read</span> <span class="n">user</span> <span class="nb">input</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Final in a seperate category is &quot;</span> <span class="o">+</span> <span class="n">tof</span><span class="p">);</span>  <span class="o">//</span> <span class="n">Output</span> <span class="n">user</span> <span class="nb">input</span>
+        <span class="kt">boolean</span> <span class="n">tof</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextBoolean</span><span class="p">();</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Final in a seperate category is &quot;</span> <span class="o">+</span> <span class="n">tof</span><span class="p">);</span>  <span class="c1">// Output user input</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="n">tof</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is your current grade rn?&quot;</span><span class="p">);</span>
-            <span class="n">double</span> <span class="n">grade</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is your current grade rn?&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">grade</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is </span><span class="si">% o</span><span class="s2">f grade that is final?&quot;</span><span class="p">);</span>
-            <span class="n">double</span> <span class="n">percent</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">percent</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is % of grade that is final?&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">percent</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">percent</span> <span class="o">+</span> <span class="s">&quot;%&quot;</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is your desired grade?&quot;</span><span class="p">);</span>
-            <span class="n">double</span> <span class="n">desired</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">desired</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is your desired grade?&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">desired</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">desired</span><span class="p">);</span>
 
-            <span class="n">double</span> <span class="n">output</span> <span class="o">=</span> <span class="p">(</span><span class="n">desired</span> <span class="o">-</span> <span class="p">(</span><span class="n">grade</span> <span class="o">*</span> <span class="p">((</span><span class="mi">100</span><span class="o">-</span><span class="n">percent</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="n">percent</span><span class="o">/</span><span class="mi">100</span><span class="p">);</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;You need a &quot;</span> <span class="o">+</span> <span class="n">output</span> <span class="o">+</span> <span class="s2">&quot; on your final&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">output</span> <span class="o">=</span> <span class="p">(</span><span class="n">desired</span> <span class="o">-</span> <span class="p">(</span><span class="n">grade</span> <span class="o">*</span> <span class="p">((</span><span class="mi">100</span><span class="o">-</span><span class="n">percent</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="n">percent</span><span class="o">/</span><span class="mi">100</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You need a &quot;</span> <span class="o">+</span> <span class="n">output</span> <span class="o">+</span> <span class="s">&quot; on your final&quot;</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">else</span> <span class="p">{</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is your current grade rn?&quot;</span><span class="p">);</span>
-            <span class="n">double</span> <span class="n">grade</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is your current grade rn?&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">grade</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is the </span><span class="si">% o</span><span class="s2">f grade that is test category?&quot;</span><span class="p">);</span>
-            <span class="n">double</span> <span class="n">percent</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">percent</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is the % of grade that is test category?&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">percent</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">percent</span> <span class="o">+</span> <span class="s">&quot;%&quot;</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is current </span><span class="si">% i</span><span class="s2">n tests category?&quot;</span><span class="p">);</span>
-            <span class="n">double</span> <span class="n">currentpercent</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">currentpercent</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is current % in tests category?&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">currentpercent</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">currentpercent</span> <span class="o">+</span> <span class="s">&quot;%&quot;</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is the current amount of points in the test category?&quot;</span><span class="p">);</span>
-            <span class="nb">int</span> <span class="n">currentpts</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextInt</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">currentpts</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is the current amount of points in the test category?&quot;</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">currentpts</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">currentpts</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;How many pts is the final?&quot;</span><span class="p">);</span>
-            <span class="nb">int</span> <span class="n">pts</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextInt</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">pts</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;How many pts is the final?&quot;</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">pts</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pts</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;What is your desired grade?&quot;</span><span class="p">);</span>
-            <span class="n">double</span> <span class="n">desired</span> <span class="o">=</span> <span class="n">myObj</span><span class="o">.</span><span class="n">nextDouble</span><span class="p">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">desired</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What is your desired grade?&quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">desired</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">desired</span><span class="p">);</span>
 
-            <span class="o">//</span> <span class="n">double</span> <span class="n">output</span> <span class="o">=</span> <span class="p">(</span><span class="n">desired</span> <span class="o">-</span> <span class="p">((</span><span class="n">grade</span> <span class="o">*</span> <span class="n">currentpercent</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="mi">100</span> <span class="o">-</span> <span class="n">percent</span><span class="p">)</span>  <span class="o">/</span> <span class="mi">100</span><span class="p">)))</span><span class="o">/</span><span class="p">((</span><span class="n">currentpts</span> <span class="o">+</span> <span class="n">pts</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">percent</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span><span class="o">-</span> <span class="n">currentpts</span><span class="p">;</span>
-            <span class="n">double</span> <span class="n">output</span> <span class="o">=</span> <span class="p">((</span><span class="n">desired</span> <span class="o">-</span> <span class="n">grade</span><span class="o">+</span><span class="n">currentpercent</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">currentpts</span><span class="o">+</span><span class="n">pts</span><span class="p">)</span><span class="o">-</span><span class="n">currentpts</span><span class="o">*</span><span class="n">currentpercent</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;You need &quot;</span> <span class="o">+</span> <span class="n">output</span> <span class="o">+</span> <span class="s2">&quot; pts on your final&quot;</span><span class="p">);</span>
+            <span class="c1">// double output = (desired - ((grade * currentpercent)*((100 - percent)  / 100)))/((currentpts + pts)/(percent / 100))- currentpts;</span>
+            <span class="kt">double</span> <span class="n">output</span> <span class="o">=</span> <span class="p">((</span><span class="n">desired</span> <span class="o">-</span> <span class="n">grade</span><span class="o">+</span><span class="n">currentpercent</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">currentpts</span><span class="o">+</span><span class="n">pts</span><span class="p">)</span><span class="o">-</span><span class="n">currentpts</span><span class="o">*</span><span class="n">currentpercent</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You need &quot;</span> <span class="o">+</span> <span class="n">output</span> <span class="o">+</span> <span class="s">&quot; pts on your final&quot;</span><span class="p">);</span>
         <span class="p">}</span>
     
     
 <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="n">ScanPrimitives</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">null</span><span class="p">);</span>
+<span class="n">ScanPrimitives</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>

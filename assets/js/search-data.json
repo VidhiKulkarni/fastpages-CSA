@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "Unit 6 FRQ",
             "content": "//Hack 1 int[] arrayOne = {2, 4, 6, 8, 10, 12}; for (int i = 0; i &lt; arrayOne.length; i+=2) { // if smaller than array length then increments by 2 System.out.println(arrayOne[i]); //prints array } . //Hack 2 int[] myNumbers = new int[] {4, 5, 3, 1, 2}; //jumbled array int i = 0; int min = 0; public void arraySorter(int[] array) { for (int i = 1; i &lt; array.length+1; i++) { //sorts in order for (int j = 0; j &lt; array.length; j++) { if (i == array[j]) { System.out.println(i); } } } } arraySorter(myNumbers); . public void addMembers(String[] names, int graduationYear) { //string that includes the names - 1st parameter //int that contains the grad year - 2nd parameter for (int i = 0; i&lt;names.length; i++) { //repeats for as many letters are in the name memberList.add(new Member(names[i], graduationYear, true)); //adds the names and grad year to the member list for each member return memberList; //this could possibly be names } } .",
-            "url": "https://vidhikulkarni.github.io/fastpages-CSA/2022/11/09/unit6hw.html",
-            "relUrl": "/2022/11/09/unit6hw.html",
+            "url": "https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2022/11/09/unit6hw.html",
+            "relUrl": "/fastpages/jupyter/2022/11/09/unit6hw.html",
             "date": " • Nov 9, 2022"
         }
         
@@ -370,9 +370,6 @@
   
 
   
-  
-
-  
 
   
   
@@ -383,6 +380,11 @@
   
 
   
+
+  
+  
+
+  
   
 
   
@@ -393,7 +395,7 @@
   
 
   
-      ,"page13": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://vidhikulkarni.github.io/fastpages-CSA/robots.txt",

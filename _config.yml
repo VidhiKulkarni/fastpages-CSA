@@ -42,6 +42,10 @@ minima:
     twitter: fastdotai
     github: fastai
 
+social_links:
+    - { platform: github, user_url: "https://github.com/nighthawkcoders" }
+    - { platform: twitter, user_url: "https://twitter.com/NighthawkCoding" }
+
 # Set this to true to get LaTeX math equation support
 use_math: 
 

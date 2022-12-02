@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -572,6 +572,46 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>If two boolean values/expressions are combined with a logical and (&amp;&amp;) and the first expression is false, then the second expression won't be executed.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test2</span>
+<span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="kt">boolean</span> <span class="n">walking</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+     <span class="kt">boolean</span> <span class="n">carIsAvailable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">walking</span> <span class="o">||</span> <span class="n">carIsAvailable</span><span class="p">)</span>
+     <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You can go out"</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="k">else</span>
+     <span class="p">{</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No, you can't go out"</span><span class="p">);</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Truth-Table">
 <a class="anchor" href="#Truth-Table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truth Table<a class="anchor-link" href="#Truth-Table"> </a>
 </h2>
@@ -630,21 +670,143 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>To check two numbers for equality in Java, we can use the Equals() method as well as the == operator.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Integer</span> <span class="n">val1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">Integer</span> <span class="n">val2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="p">(</span><span class="n">val1</span> <span class="o">==</span> <span class="n">val2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span> <span class="n">String</span> <span class="n">args</span><span class="o">[]</span> <span class="p">)</span> <span class="p">{</span>
+       <span class="n">Integer</span> <span class="n">val1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+       <span class="n">Integer</span> <span class="n">val2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+       <span class="n">Integer</span> <span class="n">val3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Integer 1 = "</span><span class="o">+</span><span class="n">val1</span><span class="p">);</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Integer 2 = "</span><span class="o">+</span><span class="n">val2</span><span class="p">);</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Integer 3 = "</span><span class="o">+</span><span class="n">val3</span><span class="p">);</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"val1 is equal to val2 = "</span><span class="o">+</span><span class="p">(</span><span class="n">val1</span> <span class="o">==</span> <span class="n">val2</span><span class="p">));</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"val2 is not equal to val3 = "</span><span class="o">+</span><span class="p">(</span><span class="n">val2</span> <span class="o">!=</span> <span class="n">val3</span><span class="p">));</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Comparing-Strings">
 <a class="anchor" href="#Comparing-Strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Strings<a class="anchor-link" href="#Comparing-Strings"> </a>
 </h2>
+<p>Many ways to compare strings, one way is to use: String.equalsIgnoreCase()</p>
+
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Java program to Compare two strings</span>
+<span class="c1">// lexicographically</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GFG</span> <span class="p">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">String</span> <span class="n">string1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">"Geeksforgeeks"</span><span class="p">);</span>
+		<span class="n">String</span> <span class="n">string2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">"Practice"</span><span class="p">);</span>
+		<span class="n">String</span> <span class="n">string3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">"Geeks"</span><span class="p">);</span>
+		<span class="n">String</span> <span class="n">string4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">"Geeks"</span><span class="p">);</span>
+		<span class="n">String</span> <span class="n">string5</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">"geeks"</span><span class="p">);</span>
+
+		<span class="c1">// Comparing for String 1 != String 2</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Comparing "</span> <span class="o">+</span> <span class="n">string1</span> <span class="o">+</span> <span class="s">" and "</span> <span class="o">+</span> <span class="n">string2</span>
+						<span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">string1</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">string2</span><span class="p">));</span>
+
+		<span class="c1">// Comparing for String 3 = String 4</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Comparing "</span> <span class="o">+</span> <span class="n">string3</span> <span class="o">+</span> <span class="s">" and "</span> <span class="o">+</span> <span class="n">string4</span>
+						<span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">string3</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">string4</span><span class="p">));</span>
+
+		<span class="c1">// Comparing for String 4 = String 5</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Comparing "</span> <span class="o">+</span> <span class="n">string4</span> <span class="o">+</span> <span class="s">" and "</span> <span class="o">+</span> <span class="n">string5</span>
+						<span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">string4</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">string5</span><span class="p">));</span>
+
+		<span class="c1">// Comparing for String 1 != String 4</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Comparing "</span> <span class="o">+</span> <span class="n">string1</span> <span class="o">+</span> <span class="s">" and "</span> <span class="o">+</span> <span class="n">string4</span>
+						<span class="o">+</span> <span class="s">" : "</span> <span class="o">+</span> <span class="n">string1</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">string4</span><span class="p">));</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Comparing-Objects">
 <a class="anchor" href="#Comparing-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Objects<a class="anchor-link" href="#Comparing-Objects"> </a>
 </h2>
+<p>We can use == and != operators in order to compare objects.</p>
+
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">assertThat</span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">).</span><span class="na">isTrue</span><span class="p">();</span>
+<span class="n">Integer</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">assertThat</span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="n">a</span><span class="p">).</span><span class="na">isTrue</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

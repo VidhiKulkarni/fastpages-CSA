@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -105,6 +105,154 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cupcake</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
+	<span class="c1">// Class data</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Cupcake</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">flavor</span><span class="p">,</span> <span class="n">frosting</span><span class="p">,</span> <span class="n">sprinkles</span><span class="p">}</span>
+
+	<span class="c1">// Instance data</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">frosting</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">sprinkles</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">flavor</span><span class="p">;</span>
+
+	<span class="c1">// Constructor</span>
+	<span class="n">Cupcake</span><span class="p">(</span><span class="n">String</span> <span class="n">frosting</span><span class="p">,</span> <span class="kt">int</span> <span class="n">sprinkles</span><span class="p">,</span> <span class="n">String</span> <span class="n">flavor</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">&quot;Cupcake&quot;</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">frosting</span> <span class="o">=</span> <span class="n">frosting</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">sprinkles</span> <span class="o">=</span> <span class="n">sprinkles</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">flavor</span> <span class="o">=</span> <span class="n">flavor</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="cm">/* &#39;Generics&#39; requires getKey to help enforce KeyTypes usage */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Cupcake</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
+
+	<span class="cm">/* &#39;Generics&#39; requires toString override</span>
+<span class="cm">	 * toString provides data based off of Static Key setting</span>
+<span class="cm">	 */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>		
+		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">flavor</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">frosting</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">frosting</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">sprinkles</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="s">&quot;00&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">sprinkles</span><span class="p">;</span>
+			<span class="n">output</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">flavor</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">frosting</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">sprinkles</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Test data initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Cupcake</span><span class="o">[]</span> <span class="nf">cupcakes</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">Cupcake</span><span class="o">[]</span><span class="p">{</span>
+            <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Red&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&quot;Red Velvet&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;Orange&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s">&quot;Lemon&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Green&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;Apple&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Blue&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s">&quot;Blueberry&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Purple&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s">&quot;Blackberry&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Pink&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;Strawberry&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Tan&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="s">&quot;Vanilla&quot;</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">&quot;Brown&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">&quot;Chocolate&quot;</span><span class="p">),</span>
+		<span class="p">};</span>
+	<span class="p">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Inheritance Hierarchy</span>
+		<span class="n">Cupcake</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">cupcakes</span><span class="p">();</span>
+
+		<span class="c1">// print with title</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+
+		<span class="c1">// print flavor only</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">);</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+<span class="p">}</span>
+<span class="n">Cupcake</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class Cupcake extends </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">Generics</span><span class="ansi-black-intense-fg ansi-bold"> {</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class Generics</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public static </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">KeyTypes</span><span class="ansi-black-intense-fg ansi-bold"> key = KeyType.title;  // static initializer</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class KeyTypes</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public static void setOrder(</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">KeyTypes</span><span class="ansi-black-intense-fg ansi-bold"> key) {Cupcake.key = key;}</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class KeyTypes</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	protected </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">KeyTypes</span><span class="ansi-black-intense-fg ansi-bold"> getKey() { return Cupcake.key; }</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class KeyTypes</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public enum KeyType implements </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">KeyTypes</span><span class="ansi-black-intense-fg ansi-bold"> {title, flavor, frosting, sprinkles}</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class KeyTypes</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">this.setType</span><span class="ansi-black-intense-fg ansi-bold">(&#34;Cupcake&#34;);</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol: method setType(java.lang.String)</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">@Override</span>
+<span class="ansi-red-intense-fg ansi-bold">method does not override or implement a method from a supertype</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">@Override</span>
+<span class="ansi-red-intense-fg ansi-bold">method does not override or implement a method from a supertype</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">			output = </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">super</span><span class="ansi-black-intense-fg ansi-bold">.getType() + &#34;: &#34; + this.flavor + &#34;, &#34; + this.frosting + &#34;, &#34; + this.sprinkles;</span>
+<span class="ansi-red-intense-fg ansi-bold">non-static variable super cannot be referenced from a static context</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">			output = </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">super.getType</span><span class="ansi-black-intense-fg ansi-bold">() + &#34;: &#34; + this.flavor + &#34;, &#34; + this.frosting + &#34;, &#34; + this.sprinkles;</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol: method getType()</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">Cupcake.print</span><span class="ansi-black-intense-fg ansi-bold">(objs);</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method print(Cupcake[])</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">Cupcake.print</span><span class="ansi-black-intense-fg ansi-bold">(objs);</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method print(Cupcake[])</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">

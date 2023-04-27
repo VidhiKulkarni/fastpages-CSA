@@ -145,10 +145,10 @@
   
     
         ,"post13": {
-            "title": "Random Test Optional",
-            "content": "Methods and Control Structures FRQ .",
-            "url": "https://vidhikulkarni.github.io/fastpages-CSA/fastpages/jupyter/2023/04/25/randomtestoptional.html",
-            "relUrl": "/fastpages/jupyter/2023/04/25/randomtestoptional.html",
+            "title": "Merge Sort Hack 1",
+            "content": "// create a class for sorting an array of strings using merge sort class StringArr { // method to merge two subarrays of arr[] // first subarray is arr[l..m] // second subarray is arr[m+1..r] void merge(String arr[], int l, int m, int r) { // find the sizes of two subarrays to be merged int n1 = m - l + 1; int n2 = r - m; // create temp arrays String[] L = new String[n1]; String[] R = new String[n2]; // copy data to temp arrays for (int i = 0; i &lt; n1; ++i) L[i] = arr[l + i]; for (int j = 0; j &lt; n2; ++j) R[j] = arr[m + 1 + j]; // merge the temp arrays // initial indexes of first and second subarrays int i = 0, j = 0; // initial index of merged subarray array int k = l; while (i &lt; n1 &amp;&amp; j &lt; n2) { if (L[i].compareTo(R[j]) &lt;= 0) { // use compareTo for strings arr[k] = L[i]; i++; } else { arr[k] = R[j]; j++; } k++; } // copy remaining elements of L[] if any while (i &lt; n1) { arr[k] = L[i]; i++; k++; } // copy remaining elements of R[] if any while (j &lt; n2) { arr[k] = R[j]; j++; k++; } } // main function that sorts arr[l..r] using merge() void sort(String[] arr, int l, int r) { if (l &lt; r) { // find the middle point int m = l + (r - l) / 2; // sort first and second halves sort(arr, l, m); sort(arr, m + 1, r); // merge the sorted halves merge(arr, l, m, r); } } // utility function to print array of size n static void printArray(String[] arr) { int n = arr.length; for (int i = 0; i &lt; n; ++i) System.out.print(arr[i] + &quot; &quot;); System.out.println(); } // tester method public static void main(String args[]) { // create an array of strings to be sorted String[] arr = { &quot;f&quot;, &quot;c&quot;, &quot;e&quot;, &quot;d&quot;, &quot;b&quot;, &quot;a&quot; }; // print the original array System.out.println(&quot;Given Array&quot;); printArray(arr); // create an instance of StringArr class and sort the array StringArr ob = new StringArr(); ob.sort(arr, 0, arr.length - 1); // print the sorted array System.out.println(); System.out.println(&quot;Sorted array&quot;); printArray(arr); } } // call the main method of StringArr class to execute the program StringArr.main(null); . Given Array f c e d b a Sorted array a b c d e f .",
+            "url": "https://vidhikulkarni.github.io/fastpages-CSA/fastpages/hacks/2023/04/25/mergehack1.html",
+            "relUrl": "/fastpages/hacks/2023/04/25/mergehack1.html",
             "date": " • Apr 25, 2023"
         }
         

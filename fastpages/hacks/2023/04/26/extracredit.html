@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -136,33 +136,61 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringManip</span><span class="p">{</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">reverseString</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
-    <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
-    <span class="kt">char</span><span class="o">[]</span> <span class="n">strArray</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">strArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringManip</span> <span class="p">{</span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">palindromeChecker</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">String</span> <span class="n">reverse</span> <span class="o">=</span> <span class="n">reverseString</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">reverse</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">str</span> <span class="o">+</span> <span class="s">" is a palindrome"</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">str</span> <span class="o">+</span> <span class="s">" is not a palindrome"</span><span class="p">);</span>
+    <span class="c1">// Define a static method that takes a String parameter and returns a reversed String</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">reverseString</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="c1">// Get the length of the input String</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+        
+        <span class="c1">// Initialize an empty String to store the reversed String</span>
+        <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        
+        <span class="c1">// Convert the input String to a character array</span>
+        <span class="kt">char</span><span class="o">[]</span> <span class="n">strArray</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
+        
+        <span class="c1">// Iterate through the character array backwards and append each character to the result String</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">strArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="c1">// Return the reversed String</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Define a static method that takes a String parameter and checks if it is a palindrome</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">palindromeChecker</span><span class="p">(</span><span class="n">String</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="c1">// Call the reverseString method to get the reversed String</span>
+        <span class="n">String</span> <span class="n">reverse</span> <span class="o">=</span> <span class="n">reverseString</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+        
+        <span class="c1">// Compare the original String to the reversed String and check if they are equal</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">reverse</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            
+            <span class="c1">// Return a message indicating that the String is a palindrome</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">str</span> <span class="o">+</span> <span class="s">" is a palindrome"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            
+            <span class="c1">// Return a message indicating that the String is not a palindrome</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">str</span> <span class="o">+</span> <span class="s">" is not a palindrome"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Define the main tester method</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="c1">// Print the result of reversing the String "apple"</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reverse the String 'apple': "</span> <span class="o">+</span> <span class="n">StringManip</span><span class="p">.</span><span class="na">reverseString</span><span class="p">(</span><span class="s">"apple"</span><span class="p">));</span>
+        
+        <span class="c1">// Print the result of checking if the String "mom" is a palindrome</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Check if 'mom' is a Palindrome: "</span> <span class="o">+</span> <span class="n">StringManip</span><span class="p">.</span><span class="na">palindromeChecker</span><span class="p">(</span><span class="s">"mom"</span><span class="p">));</span>
+        
+        <span class="c1">// Print the result of checking if the String "computer" is a palindrome</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Check if 'computer' is a Palindrome: "</span> <span class="o">+</span> <span class="n">StringManip</span><span class="p">.</span><span class="na">palindromeChecker</span><span class="p">(</span><span class="s">"computer"</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reverse the String 'apple': "</span> <span class="o">+</span> <span class="n">StringManip</span><span class="p">.</span><span class="na">reverseString</span><span class="p">(</span><span class="s">"apple"</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Check if 'mom' is a Palindrome: "</span> <span class="o">+</span> <span class="n">StringManip</span><span class="p">.</span><span class="na">palindromeChecker</span><span class="p">(</span><span class="s">"mom"</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Check if 'computer' is a Palindrome: "</span> <span class="o">+</span> <span class="n">StringManip</span><span class="p">.</span><span class="na">palindromeChecker</span><span class="p">(</span><span class="s">"computer"</span><span class="p">));</span>
-<span class="p">}</span>
-<span class="p">}</span>
-<span class="n">StringManip</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+<span class="n">StringManip</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -205,37 +233,51 @@ Check if 'computer' is a Palindrome: computer is not a palindrome
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AdditionPattern</span> <span class="p">{</span>
+    <span class="c1">// private instance variables to store start and add values</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">start</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">add</span><span class="p">;</span>
 
+    <span class="c1">// constructor to initialize instance variables</span>
     <span class="kd">public</span> <span class="nf">AdditionPattern</span><span class="p">(</span><span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">add</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">start</span> <span class="o">=</span> <span class="n">start</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">add</span> <span class="o">=</span> <span class="n">add</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// method to return current number in sequence</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">currentNumber</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">start</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// method to move to next number in sequence</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">next</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">start</span> <span class="o">+=</span> <span class="n">add</span><span class="p">;</span>
     <span class="p">}</span>
     
+    <span class="c1">// method to move to previous number in sequence</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">previous</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">start</span> <span class="o">-=</span> <span class="n">add</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// main method to test the class</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// create a new instance of the class with start=10 and add=3</span>
         <span class="n">AdditionPattern</span> <span class="n">addition</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdditionPattern</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 
+        <span class="c1">// print the current number (should be 10)</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">addition</span><span class="p">.</span><span class="na">currentNumber</span><span class="p">());</span>
+
+        <span class="c1">// move to next number and print (should be 13)</span>
         <span class="n">addition</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">addition</span><span class="p">.</span><span class="na">currentNumber</span><span class="p">());</span>
+
+        <span class="c1">// move to previous number and print (should be 10 again)</span>
         <span class="n">addition</span><span class="p">.</span><span class="na">previous</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">addition</span><span class="p">.</span><span class="na">currentNumber</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="n">AdditionPattern</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+
+<span class="c1">// call the main method to run the program</span>
+<span class="n">AdditionPattern</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -277,55 +319,62 @@ Check if 'computer' is a Palindrome: computer is not a palindrome
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CarRepair</span>
-<span class="p">{</span>
-<span class="kd">private</span> <span class="kt">int</span> <span class="n">mechanicNum</span><span class="p">;</span>
-<span class="kd">private</span> <span class="kt">int</span> <span class="n">bayNum</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// The CarRepair class represents a repair job on a car.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CarRepair</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">mechanicNum</span><span class="p">;</span> <span class="c1">// The mechanic number responsible for the repair job</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">bayNum</span><span class="p">;</span> <span class="c1">// The bay number where the repair job will take place</span>
 
-<span class="kd">public</span> <span class="nf">CarRepair</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="n">mechanicNum</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
-<span class="n">bayNum</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="c1">// Constructor for creating a new CarRepair object.</span>
+    <span class="kd">public</span> <span class="nf">CarRepair</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">mechanicNum</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+        <span class="n">bayNum</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Returns the mechanic number for this repair job.</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getMechanicNum</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">mechanicNum</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Returns the bay number for this repair job.</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getBayNum</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">bayNum</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// There may be other instance variables, constructors, and methods not shown.</span>
 <span class="p">}</span>
- 
-<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getMechanicNum</span><span class="p">()</span>
-<span class="p">{</span> <span class="k">return</span> <span class="n">mechanicNum</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getBayNum</span><span class="p">()</span>
-<span class="p">{</span> <span class="k">return</span> <span class="n">bayNum</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="c1">// There may be other instance variables, constructors, and methods not shown.</span>
-
-<span class="p">}</span>
-
-
+<span class="c1">// The RepairSchedule class manages the schedule of car repairs.</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">RepairSchedule</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">CarRepair</span><span class="o">&gt;</span> <span class="n">schedule</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numberOfMechanics</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">CarRepair</span><span class="o">&gt;</span> <span class="n">schedule</span><span class="p">;</span> <span class="c1">// An arraylist to store the CarRepair objects</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">numberOfMechanics</span><span class="p">;</span> <span class="c1">// The total number of mechanics available to do repairs</span>
 
+    <span class="c1">// Constructor for creating a new RepairSchedule object.</span>
     <span class="kd">public</span> <span class="nf">RepairSchedule</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">schedule</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">CarRepair</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="n">numberOfMechanics</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="n">schedule</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">CarRepair</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">numberOfMechanics</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// Adds a new CarRepair object to the schedule if the mechanic and bay are not already in use.</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">addRepair</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">schedule</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getMechanicNum</span><span class="p">()</span> <span class="o">==</span> <span class="n">m</span> <span class="o">||</span> <span class="n">schedule</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getBayNum</span><span class="p">()</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">schedule</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getMechanicNum</span><span class="p">()</span> <span class="o">==</span> <span class="n">m</span> <span class="o">||</span> <span class="n">schedule</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getBayNum</span><span class="p">()</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">}</span>
         <span class="p">}</span>
+        <span class="n">schedule</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">CarRepair</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">schedule</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">CarRepair</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
-    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">RepairSchedule</span> <span class="n">schedule</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RepairSchedule</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// create a schedule with 3 mechanics</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="c1">// should print true</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="c1">// should print true</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="c1">// should print true</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="c1">// should print false (both mechanic 2 and bay 2 are already in use)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// should print true</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">RepairSchedule</span> <span class="n">schedule</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RepairSchedule</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// create a schedule with 3 mechanics</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="c1">// should print true</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span> <span class="c1">// should print true</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="c1">// should print true</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="c1">// should print false (both mechanic 2 and bay 2 are already in use)</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schedule</span><span class="p">.</span><span class="na">addRepair</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// should print true</span>
-<span class="p">}</span>
-<span class="p">}</span>
+
+<span class="c1">// Call the main method of the RepairSchedule class</span>
 <span class="n">RepairSchedule</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
@@ -371,6 +420,8 @@ true
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayResizer</span> <span class="p">{</span>
+    
+    <span class="c1">// Check if a given row in a 2D array has all non-zero values</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isNonZeroRow</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array2D</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Use == instead of = to compare values</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">array2D</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -378,10 +429,11 @@ true
                 <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="c1">// Move return statement inside the method</span>
+        <span class="c1">// If all values are non-zero, return true</span>
         <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// Resize a 2D array by copying its elements into a new array</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[][]</span> <span class="nf">resize</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array2D</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">rownum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -391,9 +443,9 @@ true
             <span class="k">for</span> <span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">array2D</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">arr</span><span class="o">[</span><span class="n">rownum</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">=</span> <span class="n">array2D</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span>
             <span class="p">}</span>
-            <span class="n">rownum</span><span class="o">++</span><span class="p">;</span> <span class="c1">// Move increment statement inside the outer loop</span>
+            <span class="n">rownum</span><span class="o">++</span><span class="p">;</span> <span class="c1">// Increment rownum to copy elements to the next row in the new array</span>
         <span class="p">}</span>
-        <span class="c1">// Add return statement</span>
+        <span class="c1">// Return the resized array</span>
         <span class="k">return</span> <span class="n">arr</span><span class="p">;</span>
     <span class="p">}</span>
 

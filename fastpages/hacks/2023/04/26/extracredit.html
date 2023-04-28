@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      11 min read
     
 </span></p>
 
@@ -107,6 +107,12 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Car-Created-FRQ">Car Created FRQ </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Part-1">Part 1 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Part-2">Part 2 </a></li>
 <li class="toc-entry toc-h2"><a href="#Methods-and-Control-Structures-FRQ">Methods and Control Structures FRQ </a></li>
 <li class="toc-entry toc-h2"><a href="#Writing-Classes-FRQ">Writing Classes FRQ </a></li>
 <li class="toc-entry toc-h2"><a href="#Arrays/Arraylist-FRQ">Arrays/Arraylist FRQ </a></li>
@@ -120,6 +126,415 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Car-Created-FRQ">
+<a class="anchor" href="#Car-Created-FRQ" aria-hidden="true"><span class="octicon octicon-link"></span></a>Car Created FRQ<a class="anchor-link" href="#Car-Created-FRQ"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Part-1">
+<a class="anchor" href="#Part-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 1<a class="anchor-link" href="#Part-1"> </a>
+</h3>
+<p>Define 1 argument constructor using title</p>
+<p>Define toString method for id and title</p>
+<p>Create a public getter that has attributes of car</p>
+<p>Define tester method that initializes at least 2 cars, date, and cost</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Food</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">food</span><span class="p">;</span> 
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">orders</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">startTime</span><span class="p">;</span> 
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+    <span class="c1">//protected so it can be accessed through the extended classes</span>
+
+    <span class="kd">public</span> <span class="nf">Food</span><span class="p">(</span><span class="n">String</span> <span class="n">food</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">food</span> <span class="o">=</span> <span class="n">food</span><span class="p">;</span>
+        <span class="n">orders</span><span class="o">++</span><span class="p">;</span> <span class="c1">//increases the orders since its static</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span> <span class="c1">//starts the time when the food is prepared</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">orders</span><span class="p">;</span> <span class="c1">//unique id is the order </span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getId</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">id</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//uses toString method to get the order</span>
+        <span class="k">return</span> <span class="s">"Restaurant order: "</span> <span class="o">+</span> <span class="n">food</span> <span class="o">+</span> <span class="s">"\n Order Number: "</span> <span class="o">+</span> <span class="n">id</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getOrders</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">orders</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">waitingTime</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">//returns the waiting time after food is prepared to when its picked up</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">goneBad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">waitingTime</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">100000000</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">//food has gone bad once time is equal to ~ 1 hr</span>
+
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Part 1:"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="n">Food</span><span class="o">[]</span> <span class="n">foods</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="k">new</span> <span class="n">Food</span><span class="p">(</span><span class="s">"Pasta"</span><span class="p">),</span>
+        <span class="k">new</span> <span class="n">Food</span><span class="p">(</span><span class="s">"Tacos"</span><span class="p">),</span>
+        <span class="k">new</span> <span class="n">Food</span><span class="p">(</span><span class="s">"Bagels"</span><span class="p">)</span>
+        <span class="p">};</span> <span class="c1">//puts all the foods into an array for simplicity</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="n">Food</span> <span class="n">food1</span> <span class="p">:</span> <span class="n">foods</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">food1</span><span class="p">);</span>
+        <span class="p">}</span> <span class="c1">//enhanced for loop to print out all foods</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\nNumber of Total Orders: "</span> <span class="o">+</span> <span class="n">orders</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Food</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Part 1:
+~~~~~~~~~~~
+Restaurant order: Pasta
+ Order Number: 1
+Restaurant order: Tacos
+ Order Number: 2
+Restaurant order: Bagels
+ Order Number: 3
+
+Number of Total Orders: 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">make</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">model</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">price</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Car</span><span class="p">(</span><span class="n">String</span> <span class="n">make</span><span class="p">,</span> <span class="n">String</span> <span class="n">model</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">,</span> <span class="kt">double</span> <span class="n">price</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">make</span> <span class="o">=</span> <span class="n">make</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">model</span> <span class="o">=</span> <span class="n">model</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">price</span> <span class="o">=</span> <span class="n">price</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getMake</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">make</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getModel</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">model</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">year</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">price</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPrice</span><span class="p">(</span><span class="kt">double</span> <span class="n">price</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">price</span> <span class="o">=</span> <span class="n">price</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">year</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">make</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">model</span> <span class="o">+</span> <span class="s">", price: $"</span> <span class="o">+</span> <span class="n">price</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Car</span> <span class="n">car1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">(</span><span class="s">"Toyota"</span><span class="p">,</span> <span class="s">"Camry"</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="mf">25000.00</span><span class="p">);</span>
+        <span class="n">Car</span> <span class="n">car2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">(</span><span class="s">"Honda"</span><span class="p">,</span> <span class="s">"Civic"</span><span class="p">,</span> <span class="mi">2021</span><span class="p">,</span> <span class="mf">28000.00</span><span class="p">);</span>
+        <span class="n">Car</span> <span class="n">car3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">(</span><span class="s">"Ford"</span><span class="p">,</span> <span class="s">"Mustang"</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mf">32000.00</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car3</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Car</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2018 Toyota Camry, price: $25000.0
+2021 Honda Civic, price: $28000.0
+2016 Ford Mustang, price: $32000.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-2">
+<a class="anchor" href="#Part-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 2<a class="anchor-link" href="#Part-2"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Takeout</span> <span class="kd">extends</span> <span class="n">Food</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">orderName</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">pickups</span><span class="p">;</span>
+
+    <span class="n">Takeout</span><span class="p">(</span><span class="n">String</span> <span class="n">food</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">food</span><span class="p">);</span> <span class="c1">//calls super from the Food class</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">pickups</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//sets the pickups amount to 0</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"Restaurant order: "</span> <span class="o">+</span> <span class="n">food</span> <span class="o">+</span> <span class="s">"\n Pickup Order Name: "</span> <span class="o">+</span> <span class="n">orderName</span><span class="p">;</span>
+        <span class="c1">//overrides to return the order name</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getOrderName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">orderName</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">//setter and getter for order name</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setOrderName</span><span class="p">(</span><span class="n">String</span> <span class="n">orderName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">orderName</span> <span class="o">=</span> <span class="n">orderName</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//number of orders picked up</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pickups</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">pickups</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+        <span class="c1">//starts the time at the pickup</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getPickups</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">pickups</span><span class="p">;</span> <span class="c1">//returns pickups</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dine</span> <span class="kd">extends</span> <span class="n">Food</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">dineIn</span><span class="p">;</span>
+
+    <span class="n">Dine</span><span class="p">(</span><span class="n">String</span> <span class="n">food</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">food</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">//constructor for dine in people</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDineIn</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">dineIn</span><span class="p">;</span>
+    <span class="p">}</span> <span class="c1">//gets the name of the person</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDineIn</span><span class="p">(</span><span class="n">String</span> <span class="n">dineIn</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">dineIn</span> <span class="o">=</span> <span class="n">dineIn</span><span class="p">;</span>
+    <span class="p">}</span> <span class="c1">//setter for dine in</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"Restaurant order: "</span> <span class="o">+</span> <span class="n">food</span> <span class="o">+</span> <span class="s">"\n Dine in Order Name: "</span> <span class="o">+</span> <span class="n">dineIn</span><span class="p">;</span>
+        <span class="c1">//overrides to return the order name</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Owner</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Part 2:"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="n">Takeout</span><span class="o">[]</span> <span class="n">takeouts</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="k">new</span> <span class="n">Takeout</span><span class="p">(</span><span class="s">"Burrito"</span><span class="p">),</span>
+        <span class="k">new</span> <span class="n">Takeout</span><span class="p">(</span><span class="s">"Chicken Curry"</span><span class="p">),</span>
+        <span class="k">new</span> <span class="n">Takeout</span><span class="p">(</span><span class="s">"Vegetarian Noodles"</span><span class="p">)</span>
+        <span class="p">};</span> <span class="c1">//puts all the foods into an array for simplicity</span>
+
+        <span class="n">Dine</span><span class="o">[]</span> <span class="n">diners</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="k">new</span> <span class="n">Dine</span><span class="p">(</span><span class="s">"Salad"</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Dine</span><span class="p">(</span><span class="s">"Pizza"</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Dine</span><span class="p">(</span><span class="s">"Gobi Manchurian"</span><span class="p">)</span>
+            <span class="p">};</span> <span class="c1">//puts all the foods into an array for simplicity</span>
+    
+        <span class="n">takeouts</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">setOrderName</span><span class="p">(</span><span class="s">"Riya"</span><span class="p">);</span>
+        <span class="n">takeouts</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">setOrderName</span><span class="p">(</span><span class="s">"Vidhi"</span><span class="p">);</span>
+        <span class="n">takeouts</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">.</span><span class="na">setOrderName</span><span class="p">(</span><span class="s">"Vika"</span><span class="p">);</span>
+        <span class="n">diners</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">setDineIn</span><span class="p">(</span><span class="s">"Riya"</span><span class="p">);</span>
+        <span class="n">diners</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">setDineIn</span><span class="p">(</span><span class="s">"Vidhi"</span><span class="p">);</span>
+        <span class="n">diners</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">.</span><span class="na">setDineIn</span><span class="p">(</span><span class="s">"Vika"</span><span class="p">);</span>
+        <span class="c1">//sets all the takeout order names and diner names</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="n">Takeout</span> <span class="n">take</span> <span class="p">:</span> <span class="n">takeouts</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">take</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Waiting Time: "</span> <span class="o">+</span> <span class="n">take</span><span class="p">.</span><span class="na">waitingTime</span><span class="p">());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="p">}</span> <span class="c1">//enhanced for loop to print out all takeout orders</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="n">Dine</span> <span class="n">dine</span> <span class="p">:</span> <span class="n">diners</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">dine</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Waiting Time: "</span> <span class="o">+</span> <span class="n">dine</span><span class="p">.</span><span class="na">waitingTime</span><span class="p">());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="p">}</span> <span class="c1">//enhanced for loop to print out all diners</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Part 3:"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="n">Takeout</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Takeout</span><span class="p">(</span><span class="s">"Burgers"</span><span class="p">);</span>
+        <span class="n">Dine</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dine</span><span class="p">(</span><span class="s">"Soup"</span><span class="p">);</span>
+
+        <span class="c1">//checks if gone bad</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Has it gone bad? "</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="na">goneBad</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Has it gone bad? "</span> <span class="o">+</span> <span class="n">d</span><span class="p">.</span><span class="na">goneBad</span><span class="p">());</span>
+        
+        <span class="k">try</span><span class="p">{</span>
+            <span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">//sleep in java to forward time and check</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">().</span><span class="na">interrupt</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"After some time..."</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="c1">//checks if gone bad after time skip</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Has it gone bad? "</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="na">goneBad</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Has it gone bad? "</span> <span class="o">+</span> <span class="n">d</span><span class="p">.</span><span class="na">goneBad</span><span class="p">());</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Owner</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Part 2:
+~~~~~~~~~~~
+Restaurant order: Burrito
+ Pickup Order Name: Riya
+Waiting Time: 5714930.0
+
+Restaurant order: Chicken Curry
+ Pickup Order Name: Vidhi
+Waiting Time: 1.3976192E7
+
+Restaurant order: Vegetarian Noodles
+ Pickup Order Name: Vika
+Waiting Time: 1.5580933E7
+
+Restaurant order: Salad
+ Dine in Order Name: Riya
+Waiting Time: 2.4903908E7
+
+Restaurant order: Pizza
+ Dine in Order Name: Vidhi
+Waiting Time: 3.0058618E7
+
+Restaurant order: Gobi Manchurian
+ Dine in Order Name: Vika
+Waiting Time: 3.6386993E7
+
+Part 3:
+~~~~~~~~~~~
+Has it gone bad? false
+Has it gone bad? false
+
+After some time...
+
+Has it gone bad? true
+Has it gone bad? true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ensure Novel and Textbook run the Constructor from Book.</p>
+<p>Create instance variables unique to Novel has Author, Textbook has publishing company. New items are not required by Constructor.</p>
+<p>Make Getters and Setters for all new items. For instance, be able to set items not required by constructor.</p>
+<p>Add a time when book entered the library. This should be same for Parent and Subclasses.</p>
+<p>Define tester method to test all items</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
